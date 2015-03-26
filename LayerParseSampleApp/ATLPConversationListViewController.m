@@ -48,7 +48,6 @@
     [super viewDidLoad];
     self.dataSource = self;
     self.delegate = self;
-    self.allowsEditing = false;
     
     UIBarButtonItem *logoutItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonTapped:)];
     [self.navigationItem setLeftBarButtonItem:logoutItem];

@@ -111,8 +111,12 @@
         PFQuery *query = [PFUser query];
         [query whereKey:@"objectId" notContainedIn:userIDS];
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-            for (PFUser *user in objects) {
-                [user pinInBackground];
+            if (!error) {
+                for (PFUser *user in objects) {
+                    [user pinInBackground];
+                }
+            } else {
+                NSLog(@"Error querying Parse for Users with error: %@", error);
             }
         }];
     }];
