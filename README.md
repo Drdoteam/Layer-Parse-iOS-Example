@@ -6,18 +6,19 @@ LayerParseSampleApp is a sample application highlighting how to integrate Layer 
 
 This application requires Xcode and the iOS SDK v8.0. Dependencies are managed via [CocoaPods](http://cocoapods.org/) to simplify installation.
 
-## Usage
+## Setup
 
+1. Create a new [app](https://parse.com/apps) in Parse.
 1. Clone the project from Github: `$ git clone https://github.com/layerhq/LayerParseSampleApp.git`
 2. Install the dependencies via CocoaPods: `$ pod install`
 3. Open `LayerParseSampleApp.xcworkspace` in Xcode.
-4. Replace `ATLPLayerAppIDString` , `ParseAppIDString` , and `ParseClientKeyString` in ATLPAppDelegate.m with your Parse and Layer credentials.  If you skip this step the project will not work.
+4. Replace `ATLPLayerAppIDString` , `ParseAppIDString` , and `ParseClientKeyString` in ATLPAppDelegate.m with your Parse and Layer credentials. The project will not work if you skip this step.
 
 ## Highlights
 
 * Uses [ParseUI](https://github.com/ParsePlatform/ParseUI-iOS) to authenticate and create new users.
 * Demonstrates how to get identity tokens from Parse Cloud Code using the [Layer Parse Cloud Module](https://github.com/layerhq/layer-parse-module)
-* Uses [Atlas](https://github.com/ParsePlatform/ParseUI-iOS) to authenticate and create new users.
+* Uses [Atlas](https://atlas.layer.com), Layer's UI components
 
 ## Configuration
 
@@ -33,14 +34,14 @@ This project was lovingly crafted in San Francisco by Abir Majumdar and Kabir Ma
 
 Abir Majumdar
 
-- http://github.com/maju6406
-- http://twitter.com/beersy
-- abir@layer.com
+- [http://github.com/maju6406](http://github.com/maju6406)
+- [http://twitter.com/beersy](http://twitter.com/beersy)
+- [abir@layer.com](mailto:abir@layer.com)
 
 Kabir Mahal
 
-- https://github.com/kmahal/
-- kabir@layer.com
+- [https://github.com/kmahal/](https://github.com/kmahal/)
+- [kabir@layer.com](mailto:abir@layer.com)
 
 ## License
 
