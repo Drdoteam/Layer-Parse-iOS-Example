@@ -48,15 +48,12 @@
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
-        
-        // Assign our sign up controller to be displayed from the login controller
         [self.logInViewController setSignUpController:signUpViewController];
-        [signUpViewController setDelegate:self]; // Set ourselves as the delegate
+        [signUpViewController setDelegate:self];
         UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"parse_logo2.png"]];
         signupImageView.contentMode = UIViewContentModeScaleAspectFit;
         signUpViewController.signUpView.logo = signupImageView;
         
-        // Present the log in view controller
         [self presentViewController:self.logInViewController animated:YES completion:nil];
     }
     else{
@@ -69,7 +66,6 @@
 // Sent to the delegate to determine whether the log in request should be submitted to the server.
 - (BOOL)logInViewController:(PFLogInViewController *)logInController shouldBeginLogInWithUsername:(NSString *)username password:(NSString *)password
 {
-    // Check if both fields are completed
     if (username && password && username.length && password.length) {
         return YES; // Begin login process
     }
@@ -85,17 +81,14 @@
     [self loginLayer];
 }
 
-// Sent to the delegate when the log in attempt fails.
 - (void)logInViewController:(PFLogInViewController *)logInController didFailToLogInWithError:(NSError *)error
 {
     NSLog(@"Failed to log in...");
 }
 
-// Sent to the delegate when the log in screen is dismissed.
 - (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
 {
     NSLog(@"User dismissed the logInViewController");
-    //[self presentViewController:logInController animated:YES completion:NULL];
 }
 
 #pragma mark - PFSignUpViewControllerDelegate
@@ -129,7 +122,6 @@
     [self loginLayer];
 }
 
-// Sent to the delegate when the sign up attempt fails.
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error
 {
     NSLog(@"Failed to sign up...");
@@ -154,7 +146,6 @@
         }
     }];
     
-    // Present the log in view controller
     [self presentViewController:self.logInViewController animated:YES completion:NULL];
 }
 

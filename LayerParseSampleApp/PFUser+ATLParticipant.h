@@ -3,7 +3,7 @@
 //  LayerParseTest
 //
 //  Created by Abir Majumdar on 3/1/15.
-//  Copyright (c) 2015 Abir Majumdar. All rights reserved.
+//  Copyright (c) 2015 Layer. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
