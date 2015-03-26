@@ -90,6 +90,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5A9C51961AC4773F00C5688F /* Atlas */ = {
+			isa = PBXGroup;
+			children = (
+				5AD49C0F1AC39BE800B1B0C8 /* ATLPConversationListViewController.h */,
+				5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */,
+				5AD49C111AC39BE800B1B0C8 /* ATLPConversationViewController.h */,
+				5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */,
+				5AD49C131AC39BE800B1B0C8 /* ATLPParticipantTableViewController.h */,
+				5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */,
+			);
+			name = Atlas;
+			sourceTree = "<group>";
+		};
 		5AD49BDC1AC399DD00B1B0C8 = {
 			isa = PBXGroup;
 			children = (
@@ -118,8 +131,6 @@
 				5AD49C0E1AC39BCD00B1B0C8 /* Controllers */,
 				5AD49BEC1AC399DD00B1B0C8 /* ATLPAppDelegate.h */,
 				5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */,
-				5AD49BEF1AC399DD00B1B0C8 /* ATLPViewController.h */,
-				5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */,
 				5AD49BF21AC399DD00B1B0C8 /* Main.storyboard */,
 				5AD49BF51AC399DD00B1B0C8 /* Images.xcassets */,
 				5AD49BF71AC399DD00B1B0C8 /* LaunchScreen.xib */,
@@ -158,12 +169,9 @@
 		5AD49C0E1AC39BCD00B1B0C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5AD49C0F1AC39BE800B1B0C8 /* ATLPConversationListViewController.h */,
-				5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */,
-				5AD49C111AC39BE800B1B0C8 /* ATLPConversationViewController.h */,
-				5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */,
-				5AD49C131AC39BE800B1B0C8 /* ATLPParticipantTableViewController.h */,
-				5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */,
+				5AD49BEF1AC399DD00B1B0C8 /* ATLPViewController.h */,
+				5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */,
+				5A9C51961AC4773F00C5688F /* Atlas */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
