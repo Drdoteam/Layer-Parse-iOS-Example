@@ -1,9 +1,9 @@
 //
-//  PFUser+Participant.h
-//  LayerParseTest
+//  AppDelegate.h
+//  LayerParseSampleApp
 //
-//  Created by Abir Majumdar on 3/1/15.
-//  Copyright (c) 2015 Abir Majumdar. All rights reserved.
+//  Created by Kabir Mahal on 3/25/15.
+//  Copyright (c) 2015 Layer. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
 //  you may not use this file except in compliance with the License.
@@ -18,10 +18,12 @@
 //  limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-#import <Parse/Parse.h>
-#import <Atlas/Atlas.h>
+#import <UIKit/UIKit.h>
 
-@interface PFUser (ATLParticipant) <ATLParticipant>
+@interface ATLPAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+
