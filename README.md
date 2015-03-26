@@ -22,9 +22,9 @@ This application requires Xcode and the iOS SDK v8.0. Dependencies are managed v
 
 ## Configuration
 
-In order to populate the sample app with content, you must configure the following variable inside Constants.h:
+In order to populate the sample app with content, you must configure the following variable inside ATLPAppDelegate.m:
 
-* `LQSLayerAppIDString`: The Layer application identifier for you application.
+* `ATLPLayerAppIDString`: The Layer application identifier for you application.
 * `ParseAppIDString`: Your Parse App ID.
 * `ParseClientKeyString`: Your Parse Client Key.
 
