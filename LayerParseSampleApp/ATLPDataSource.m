@@ -60,6 +60,7 @@
 {
     PFQuery *query = [PFUser query];
     [query fromLocalDatastore];
+    [query whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (completion) completion(objects);
