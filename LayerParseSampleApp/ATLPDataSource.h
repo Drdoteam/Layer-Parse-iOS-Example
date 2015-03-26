@@ -33,7 +33,6 @@
 
 - (PFUser *)localQueryForUserID:(NSString *)userID;
 
-
 //Data Creation Methods
 - (void)createLocalParseUsersIfNeeded;
 
