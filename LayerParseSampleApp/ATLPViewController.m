@@ -42,7 +42,7 @@
                                            PFLogInFieldsSignUpButton |
                                            PFLogInFieldsPasswordForgotten);
         [self.logInViewController setDelegate:self]; // Set ourselves as the delegate
-        UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"parse_logo.png"]];
+        UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         logoImageView.contentMode = UIViewContentModeScaleAspectFit;
         self.logInViewController.logInView.logo = logoImageView;
         
@@ -50,7 +50,7 @@
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
         [self.logInViewController setSignUpController:signUpViewController];
         [signUpViewController setDelegate:self];
-        UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"parse_logo2.png"]];
+        UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         signupImageView.contentMode = UIViewContentModeScaleAspectFit;
         signUpViewController.signUpView.logo = signupImageView;
         

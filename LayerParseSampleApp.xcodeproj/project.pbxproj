@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5A9C519E1AC5C80800C5688F /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C519D1AC5C80800C5688F /* Users.json */; };
+		5A9C51A01AC5FF5A00C5688F /* LayerParseAppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */; };
+		5A9C51A21AC5FFEF00C5688F /* LayerParseLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */; };
+		5A9C51A41AC601C900C5688F /* LayerParseSplash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */; };
 		5AD49BEB1AC399DD00B1B0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BEA1AC399DD00B1B0C8 /* main.m */; };
 		5AD49BEE1AC399DD00B1B0C8 /* ATLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */; };
 		5AD49BF11AC399DD00B1B0C8 /* ATLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */; };
@@ -36,6 +39,9 @@
 
 /* Begin PBXFileReference section */
 		5A9C519D1AC5C80800C5688F /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseAppIcon@2x.png"; sourceTree = "<group>"; };
+		5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseLogin@2x.png"; sourceTree = "<group>"; };
+		5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseSplash@2x.png"; sourceTree = "<group>"; };
 		5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerParseSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD49BE91AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD49BEA1AC399DD00B1B0C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +150,9 @@
 		5AD49BE81AC399DD00B1B0C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */,
+				5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */,
+				5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */,
 				5A9C519D1AC5C80800C5688F /* Users.json */,
 				5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */,
 				5AD49BE91AC399DD00B1B0C8 /* Info.plist */,
@@ -289,10 +298,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AD49C211AC39C1C00B1B0C8 /* parse_logo.png in Resources */,
+				5A9C51A21AC5FFEF00C5688F /* LayerParseLogin@2x.png in Resources */,
 				5AD49BF41AC399DD00B1B0C8 /* Main.storyboard in Resources */,
 				5AD49BF91AC399DD00B1B0C8 /* LaunchScreen.xib in Resources */,
+				5A9C51A01AC5FF5A00C5688F /* LayerParseAppIcon@2x.png in Resources */,
 				5A9C519E1AC5C80800C5688F /* Users.json in Resources */,
 				5AD49BF61AC399DD00B1B0C8 /* Images.xcassets in Resources */,
+				5A9C51A41AC601C900C5688F /* LayerParseSplash@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
