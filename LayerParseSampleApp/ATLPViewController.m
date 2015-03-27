@@ -86,11 +86,6 @@
     NSLog(@"Failed to log in...");
 }
 
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
-{
-    NSLog(@"User dismissed the logInViewController");
-}
-
 #pragma mark - PFSignUpViewControllerDelegate
 
 // Sent to the delegate to determine whether the sign up request should be submitted to the server.
@@ -125,12 +120,6 @@
 - (void)signUpViewController:(PFSignUpViewController *)signUpController didFailToSignUpWithError:(NSError *)error
 {
     NSLog(@"Failed to sign up...");
-}
-
-// Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController
-{
-    NSLog(@"User dismissed the signUpViewController");
 }
 
 #pragma mark - IBActions
