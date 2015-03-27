@@ -23,6 +23,7 @@
 #import "ATLPConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
+#import <ATLConstants.h>
 
 @interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 @property (nonatomic) NSArray *usersArray;
@@ -37,6 +38,8 @@
     [super viewDidLoad];
     self.dataSource = self;
     self.delegate = self;
+    
+    [self.navigationController.navigationBar setTintColor:ATLBlueColor()];
     
     UIBarButtonItem *logoutItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonTapped:)];
     [self.navigationItem setLeftBarButtonItem:logoutItem];
