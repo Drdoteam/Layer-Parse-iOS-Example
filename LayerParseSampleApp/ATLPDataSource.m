@@ -21,6 +21,13 @@
 #import "ATLPDataSource.h"
 #import <Parse/Parse.h>
 #import "PFUser+ATLParticipant.h"
+#import <Bolts/Bolts.h>
+
+@interface ATLPDataSource ()
+
+@property (nonatomic) NSMutableDictionary *usersDictionary;
+
+@end
 
 @implementation ATLPDataSource
 
@@ -35,6 +42,24 @@
     });
     
     return sharedInstance;
+}
+
+- (instancetype)init {
+    
+    self = [super init];
+    if (self) {
+        self.usersDictionary = [NSMutableDictionary new];
+        [self loadLocalDataStore];
+    }
+    return self;
+}
+
+- (void)loadLocalDataStore {
+    [self localQueryForAllUsersWithCompletion:^(NSArray *users) {
+        for (PFUser *user in users) {
+            [self.usersDictionary setObject:user forKey:user.objectId];
+        }
+    }];
 }
 
 #pragma mark Query Methods
@@ -69,9 +94,11 @@
 
 - (PFUser *)localQueryForUserID:(NSString *)userID
 {
-    PFQuery *query = [PFUser query];
-    [query fromLocalDatastore];
-    PFUser *user = (PFUser*)[query getObjectWithId:userID];
+//    PFQuery *query = [PFUser query];
+//    [query fromLocalDatastore];
+//    PFUser *user = (PFUser*)[query getObjectWithId:userID];
+    
+    PFUser *user = (PFUser *)[self.usersDictionary objectForKey:userID];
     return user;
 }
 
@@ -95,6 +122,8 @@
     user.username = username;
     user.objectId = [NSString stringWithFormat:@"ATLP%@", user.avatarInitials];
     [user pinInBackground];
+    
+    [self.usersDictionary setObject:user forKey:user.objectId];
 }
 
 - (void)queryAndLocallyStoreCloudUsers

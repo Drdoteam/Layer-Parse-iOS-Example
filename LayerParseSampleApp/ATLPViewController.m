@@ -157,7 +157,7 @@
     
     [[ATLPDataSource sharedManager] createLocalParseUsersIfNeeded];
     
-    // This method will query your Cloud User table for any registered users.  If you want to test a conversation on both sides, use this method.
+    // This method will query your Cloud User table for any registered users.  If you want to test a conversation between 2 devices, use this method.
     // [[ATLPDataSource sharedManager] queryAndLocallyStoreCloudUsers];
     
     // Connect to Layer

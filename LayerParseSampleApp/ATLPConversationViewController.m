@@ -23,6 +23,7 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
 #import "ATLPDataSource.h"
+#import <Bolts/Bolts.h>
 
 @interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 

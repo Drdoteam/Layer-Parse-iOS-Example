@@ -79,8 +79,56 @@
     if ([conversation.metadata valueForKey:@"title"]){
         return [conversation.metadata valueForKey:@"title"];
     } else {
-        return [[ATLPDataSource sharedManager] titleForConversation:conversation];
+        //return [[ATLPDataSource sharedManager] titleForConversation:conversation];
+        
+        NSLog(@"hit");
+        
+        static NSCache *userCache = nil;
+        if (!userCache) {
+            userCache = [NSCache new];
+        }
+        
+        // Find the set of the users that we do and do not know about
+        NSMutableSet *unresolvedParticipants = [conversation.participants mutableCopy];
+        
+        if ([unresolvedParticipants containsObject:[PFUser currentUser].objectId]) {
+            [unresolvedParticipants removeObject:[PFUser currentUser].objectId];
+        }
+        
+        NSMutableArray *resolvedNames = [NSMutableArray new];
+        for (NSString *userID in conversation.participants) {
+            PFUser *user = [userCache objectForKey:userID];
+            if (user) {
+                [unresolvedParticipants removeObject:userID];
+                [resolvedNames addObject:user.firstName];
+            }
+        }
+        
+        if ([unresolvedParticipants count]) {
+            // We need to look these guys up in Parse
+            PFQuery *query = [PFUser query];
+            [query whereKey:@"objectId" containedIn:[conversation.participants allObjects]];
+            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+                if (objects) {
+                    // Cache them and reload the cell
+                    for (PFUser *user in objects) {
+                        [userCache setObject:user forKey:user.objectId];
+                    }
+                    [self.tableView reloadData];
+                }
+            }];
+        }
+        
+        // Return the title based on whatever we have available
+        if ([resolvedNames count] && [unresolvedParticipants count]) {
+            return [NSString stringWithFormat:@"%@ and %lu others", [resolvedNames componentsJoinedByString:@", "], (unsigned long)[unresolvedParticipants count]];
+        } else if ([resolvedNames count] && [unresolvedParticipants count] == 0) {
+            return [NSString stringWithFormat:@"%@", [resolvedNames componentsJoinedByString:@", "]];
+        } else {
+            return [NSString stringWithFormat:@"Conversation with %lu users...", (unsigned long)conversation.participants.count];
+        }
     }
+    
 }
 
 // optional

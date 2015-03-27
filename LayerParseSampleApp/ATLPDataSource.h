@@ -21,6 +21,7 @@
 #import <Foundation/Foundation.h>
 @class PFUser;
 @class LYRConversation;
+@class BFTask;
 
 @interface ATLPDataSource : NSObject
 
