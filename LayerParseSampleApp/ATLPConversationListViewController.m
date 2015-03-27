@@ -22,7 +22,7 @@
 #import "ATLPConversationListViewController.h"
 #import "ATLPConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
 
 @interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 @property (nonatomic) NSArray *usersArray;
@@ -67,7 +67,7 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSearchForText:(NSString *)searchText completion:(void (^)(NSSet *filteredParticipants))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants) {
         if (completion) completion([NSSet setWithArray:participants]);
     }];
 }
@@ -79,47 +79,17 @@
     if ([conversation.metadata valueForKey:@"title"]){
         return [conversation.metadata valueForKey:@"title"];
     } else {
-        //return [[ATLPDataSource sharedManager] titleForConversation:conversation];
-        
-        NSLog(@"hit");
-        
-        static NSCache *userCache = nil;
-        if (!userCache) {
-            userCache = [NSCache new];
-        }
-        
-        // Find the set of the users that we do and do not know about
-        NSMutableSet *unresolvedParticipants = [conversation.participants mutableCopy];
-        
-        if ([unresolvedParticipants containsObject:[PFUser currentUser].objectId]) {
-            [unresolvedParticipants removeObject:[PFUser currentUser].objectId];
-        }
-        
-        NSMutableArray *resolvedNames = [NSMutableArray new];
-        for (NSString *userID in conversation.participants) {
-            PFUser *user = [userCache objectForKey:userID];
-            if (user) {
-                [unresolvedParticipants removeObject:userID];
-                [resolvedNames addObject:user.firstName];
-            }
-        }
+        NSArray *unresolvedParticipants = [[ATLPUserDataSource sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
+        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesForParticipants:[conversation.participants allObjects]];
         
         if ([unresolvedParticipants count]) {
-            // We need to look these guys up in Parse
-            PFQuery *query = [PFUser query];
-            [query whereKey:@"objectId" containedIn:[conversation.participants allObjects]];
-            [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-                if (objects) {
-                    // Cache them and reload the cell
-                    for (PFUser *user in objects) {
-                        [userCache setObject:user forKey:user.objectId];
-                    }
+            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants) {
+                if (participants.count) {
                     [self.tableView reloadData];
                 }
             }];
         }
         
-        // Return the title based on whatever we have available
         if ([resolvedNames count] && [unresolvedParticipants count]) {
             return [NSString stringWithFormat:@"%@ and %lu others", [resolvedNames componentsJoinedByString:@", "], (unsigned long)[unresolvedParticipants count]];
         } else if ([resolvedNames count] && [unresolvedParticipants count] == 0) {
@@ -128,7 +98,6 @@
             return [NSString stringWithFormat:@"Conversation with %lu users...", (unsigned long)conversation.participants.count];
         }
     }
-    
 }
 
 // optional

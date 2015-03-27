@@ -22,7 +22,7 @@
 #import "ATLPParticipantTableViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
 #import <Bolts/Bolts.h>
 
 @interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
@@ -77,7 +77,13 @@
 
 - (id<ATLParticipant>)conversationViewController:(ATLConversationViewController *)conversationViewController participantForIdentifier:(NSString *)participantIdentifier
 {
-    PFUser *user = [[ATLPDataSource sharedManager] localQueryForUserID:participantIdentifier];
+    PFUser *user = [[ATLPUserDataSource sharedManager] cachedUserForUserID:participantIdentifier];
+    
+    if (!user) {
+        [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants) {
+            [self.dataSource conversationViewController:conversationViewController participantForIdentifier:participantIdentifier];
+        }];
+    }
     return user;
 }
 
@@ -118,7 +124,7 @@
 
 - (void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController didTapAddContactsButton:(UIButton *)addContactsButton
 {
-    [[ATLPDataSource sharedManager] localQueryForAllUsersWithCompletion:^(NSArray *users) {
+    [[ATLPUserDataSource sharedManager] queryForAllUsersWithCompletion:^(NSArray *users) {
         ATLPParticipantTableViewController *controller = [ATLPParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
         controller.delegate = self;
         
@@ -129,7 +135,7 @@
 
 -(void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController searchForParticipantsMatchingText:(NSString *)searchText completion:(void (^)(NSArray *))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants) {
         if (completion) completion(participants);
     }];
 }
@@ -146,7 +152,7 @@
 
 - (void)participantTableViewController:(ATLParticipantTableViewController *)participantTableViewController didSearchWithString:(NSString *)searchText completion:(void (^)(NSSet *))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants) {
         if (completion) completion([NSSet setWithArray:participants]);
     }];
 }

@@ -20,7 +20,7 @@
 
 #import "ATLPViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
 
 @interface ATLPViewController ()
 
@@ -155,7 +155,7 @@
 {
     [SVProgressHUD show];
     
-    [[ATLPDataSource sharedManager] createLocalParseUsersIfNeeded];
+    [[ATLPUserDataSource sharedManager] createLocalParseUsersIfNeeded];
     
     // This method will query your Cloud User table for any registered users.  If you want to test a conversation between 2 devices, use this method.
     // [[ATLPDataSource sharedManager] queryAndLocallyStoreCloudUsers];

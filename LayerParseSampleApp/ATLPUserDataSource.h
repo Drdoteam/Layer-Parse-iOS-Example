@@ -21,24 +21,26 @@
 #import <Foundation/Foundation.h>
 @class PFUser;
 @class LYRConversation;
-@class BFTask;
 
-@interface ATLPDataSource : NSObject
+@interface ATLPUserDataSource : NSObject
 
 + (instancetype)sharedManager;
 
-// Query Methods
-- (void)localQueryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants))completion;
+- (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants))completion;
 
-- (void)localQueryForAllUsersWithCompletion:(void (^)(NSArray *users))completion;
+- (void)queryForAllUsersWithCompletion:(void (^)(NSArray *users))completion;
 
-- (PFUser *)localQueryForUserID:(NSString *)userID;
+- (PFUser *)cachedUserForUserID:(NSString *)userID;
+
+- (void)cacheUserIfNeeded:(PFUser *)user;
+
+- (NSArray *)unCachedUserIDsFromParticipants:(NSArray *)participants;
+
+- (NSArray *)resolvedNamesForParticipants:(NSArray *)participants;
+
+- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants))completion;
 
 //Data Creation Methods
 - (void)createLocalParseUsersIfNeeded;
-
-- (void)queryAndLocallyStoreCloudUsers;
-
-- (NSString *)titleForConversation:(LYRConversation *)conversation;
 
 @end
