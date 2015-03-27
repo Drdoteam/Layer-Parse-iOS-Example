@@ -16,7 +16,7 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LayerParseLogin.png" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-Bq-9t6">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LayerParseSplash.png" translatesAutoresizingMaskIntoConstraints="NO" id="nNb-Bq-9t6">
                     <rect key="frame" x="120" y="145" width="240" height="60"/>
                 </imageView>
             </subviews>
@@ -34,6 +34,6 @@
         </view>
     </objects>
     <resources>
-        <image name="LayerParseLogin.png" width="241" height="60"/>
+        <image name="LayerParseSplash.png" width="241" height="60"/>
     </resources>
 </document>
