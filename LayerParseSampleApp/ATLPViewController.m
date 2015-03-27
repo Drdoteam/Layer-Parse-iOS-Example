@@ -20,7 +20,7 @@
 
 #import "ATLPViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
 
 @interface ATLPViewController ()
 
@@ -86,11 +86,6 @@
     NSLog(@"Failed to log in...");
 }
 
-- (void)logInViewControllerDidCancelLogIn:(PFLogInViewController *)logInController
-{
-    NSLog(@"User dismissed the logInViewController");
-}
-
 #pragma mark - PFSignUpViewControllerDelegate
 
 // Sent to the delegate to determine whether the sign up request should be submitted to the server.
@@ -127,12 +122,6 @@
     NSLog(@"Failed to sign up...");
 }
 
-// Sent to the delegate when the sign up screen is dismissed.
-- (void)signUpViewControllerDidCancelSignUp:(PFSignUpViewController *)signUpController
-{
-    NSLog(@"User dismissed the signUpViewController");
-}
-
 #pragma mark - IBActions
 
 - (IBAction)logOutButtonTapAction:(id)sender
@@ -154,12 +143,7 @@
 - (void)loginLayer
 {
     [SVProgressHUD show];
-    
-    [[ATLPDataSource sharedManager] createLocalParseUsersIfNeeded];
-    
-    // This method will query your Cloud User table for any registered users.  If you want to test a conversation on both sides, use this method.
-    // [[ATLPDataSource sharedManager] queryAndLocallyStoreCloudUsers];
-    
+        
     // Connect to Layer
     // See "Quick Start - Connect" for more details
     // https://developer.layer.com/docs/quick-start/ios#connect

@@ -22,22 +22,24 @@
 @class PFUser;
 @class LYRConversation;
 
-@interface ATLPDataSource : NSObject
+@interface ATLPUserDataSource : NSObject
 
 + (instancetype)sharedManager;
 
-// Query Methods
-- (void)localQueryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants))completion;
+// Query methods
+- (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants, NSError *error))completion;
 
-- (void)localQueryForAllUsersWithCompletion:(void (^)(NSArray *users))completion;
+- (void)queryForAllUsersWithCompletion:(void (^)(NSArray *users, NSError *error))completion;
 
-- (PFUser *)localQueryForUserID:(NSString *)userID;
+// Cache methods
+- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants, NSError *error))completion;
 
-//Data Creation Methods
-- (void)createLocalParseUsersIfNeeded;
+- (PFUser *)cachedUserForUserID:(NSString *)userID;
 
-- (void)queryAndLocallyStoreCloudUsers;
+- (void)cacheUserIfNeeded:(PFUser *)user;
 
-- (NSString *)titleForConversation:(LYRConversation *)conversation;
+- (NSArray *)unCachedUserIDsFromParticipants:(NSArray *)participants;
+
+- (NSArray *)resolvedNamesFromParticipants:(NSArray *)participants;
 
 @end

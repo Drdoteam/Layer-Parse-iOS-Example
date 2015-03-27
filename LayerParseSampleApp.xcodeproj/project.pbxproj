@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A9C519E1AC5C80800C5688F /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C519D1AC5C80800C5688F /* Users.json */; };
 		5AD49BEB1AC399DD00B1B0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BEA1AC399DD00B1B0C8 /* main.m */; };
 		5AD49BEE1AC399DD00B1B0C8 /* ATLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */; };
 		5AD49BF11AC399DD00B1B0C8 /* ATLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */; };
@@ -17,7 +18,7 @@
 		5AD49C151AC39BE800B1B0C8 /* ATLPConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */; };
 		5AD49C161AC39BE800B1B0C8 /* ATLPConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */; };
 		5AD49C171AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */; };
-		5AD49C1B1AC39BFC00B1B0C8 /* ATLPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C1A1AC39BFC00B1B0C8 /* ATLPDataSource.m */; };
+		5AD49C1B1AC39BFC00B1B0C8 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */; };
 		5AD49C1F1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C1E1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m */; };
 		5AD49C211AC39C1C00B1B0C8 /* parse_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */; };
 		C49B88E4348B2688E61F60D6 /* libPods-LayerParseSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A9C519D1AC5C80800C5688F /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
 		5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerParseSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD49BE91AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD49BEA1AC399DD00B1B0C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,8 +55,8 @@
 		5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationViewController.m; sourceTree = "<group>"; };
 		5AD49C131AC39BE800B1B0C8 /* ATLPParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPParticipantTableViewController.h; sourceTree = "<group>"; };
 		5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPParticipantTableViewController.m; sourceTree = "<group>"; };
-		5AD49C191AC39BFC00B1B0C8 /* ATLPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPDataSource.h; sourceTree = "<group>"; };
-		5AD49C1A1AC39BFC00B1B0C8 /* ATLPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPDataSource.m; sourceTree = "<group>"; };
+		5AD49C191AC39BFC00B1B0C8 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
+		5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
 		5AD49C1D1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ATLParticipant.h"; sourceTree = "<group>"; };
 		5AD49C1E1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ATLParticipant.m"; sourceTree = "<group>"; };
 		5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parse_logo.png; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		5AD49BE81AC399DD00B1B0C8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5A9C519D1AC5C80800C5688F /* Users.json */,
 				5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */,
 				5AD49BE91AC399DD00B1B0C8 /* Info.plist */,
 				5AD49BEA1AC399DD00B1B0C8 /* main.m */,
@@ -179,8 +182,8 @@
 		5AD49C181AC39BF000B1B0C8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5AD49C191AC39BFC00B1B0C8 /* ATLPDataSource.h */,
-				5AD49C1A1AC39BFC00B1B0C8 /* ATLPDataSource.m */,
+				5AD49C191AC39BFC00B1B0C8 /* ATLPUserDataSource.h */,
+				5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				5AD49C211AC39C1C00B1B0C8 /* parse_logo.png in Resources */,
 				5AD49BF41AC399DD00B1B0C8 /* Main.storyboard in Resources */,
 				5AD49BF91AC399DD00B1B0C8 /* LaunchScreen.xib in Resources */,
+				5A9C519E1AC5C80800C5688F /* Users.json in Resources */,
 				5AD49BF61AC399DD00B1B0C8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -343,7 +347,7 @@
 				5AD49C161AC39BE800B1B0C8 /* ATLPConversationViewController.m in Sources */,
 				5AD49C1F1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m in Sources */,
 				5AD49C171AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m in Sources */,
-				5AD49C1B1AC39BFC00B1B0C8 /* ATLPDataSource.m in Sources */,
+				5AD49C1B1AC39BFC00B1B0C8 /* ATLPUserDataSource.m in Sources */,
 				5AD49BEE1AC399DD00B1B0C8 /* ATLPAppDelegate.m in Sources */,
 				5AD49C151AC39BE800B1B0C8 /* ATLPConversationListViewController.m in Sources */,
 				5AD49BEB1AC399DD00B1B0C8 /* main.m in Sources */,

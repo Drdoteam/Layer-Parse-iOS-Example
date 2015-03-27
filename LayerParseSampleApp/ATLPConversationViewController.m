@@ -22,7 +22,8 @@
 #import "ATLPParticipantTableViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
+#import <Bolts/Bolts.h>
 
 @interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 
@@ -76,7 +77,17 @@
 
 - (id<ATLParticipant>)conversationViewController:(ATLConversationViewController *)conversationViewController participantForIdentifier:(NSString *)participantIdentifier
 {
-    PFUser *user = [[ATLPDataSource sharedManager] localQueryForUserID:participantIdentifier];
+    PFUser *user = [[ATLPUserDataSource sharedManager] cachedUserForUserID:participantIdentifier];
+    
+    if (!user) {
+        [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
+            if (!error) {
+                [self.dataSource conversationViewController:conversationViewController participantForIdentifier:participantIdentifier];
+            } else {
+                NSLog(@"Error querying for users: %@", error);
+            }
+        }];
+    }
     return user;
 }
 
@@ -117,19 +128,27 @@
 
 - (void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController didTapAddContactsButton:(UIButton *)addContactsButton
 {
-    [[ATLPDataSource sharedManager] localQueryForAllUsersWithCompletion:^(NSArray *users) {
-        ATLPParticipantTableViewController *controller = [ATLPParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
-        controller.delegate = self;
-        
-        UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
-        [self.navigationController presentViewController:navigationController animated:YES completion:nil];
+    [[ATLPUserDataSource sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
+        if (!error) {
+            ATLPParticipantTableViewController *controller = [ATLPParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
+            controller.delegate = self;
+            
+            UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
+            [self.navigationController presentViewController:navigationController animated:YES completion:nil];
+        } else {
+            NSLog(@"Error querying for All Users: %@", error);
+        }
     }];
 }
 
 -(void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController searchForParticipantsMatchingText:(NSString *)searchText completion:(void (^)(NSArray *))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
-        if (completion) completion(participants);
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+        if (!error) {
+            if (completion) completion(participants);
+        } else {
+            NSLog(@"Error search for participants: %@", error);
+        }
     }];
 }
 
@@ -145,8 +164,12 @@
 
 - (void)participantTableViewController:(ATLParticipantTableViewController *)participantTableViewController didSearchWithString:(NSString *)searchText completion:(void (^)(NSSet *))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
-        if (completion) completion([NSSet setWithArray:participants]);
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+        if (!error) {
+            if (completion) completion([NSSet setWithArray:participants]);
+        } else {
+            NSLog(@"Error search for participants: %@", error);
+        }
     }];
 }
 

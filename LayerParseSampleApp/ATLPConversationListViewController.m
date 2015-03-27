@@ -22,7 +22,8 @@
 #import "ATLPConversationListViewController.h"
 #import "ATLPConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPDataSource.h"
+#import "ATLPUserDataSource.h"
+#import <ATLConstants.h>
 
 @interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 @property (nonatomic) NSArray *usersArray;
@@ -37,6 +38,8 @@
     [super viewDidLoad];
     self.dataSource = self;
     self.delegate = self;
+    
+    [self.navigationController.navigationBar setTintColor:ATLBlueColor()];
     
     UIBarButtonItem *logoutItem = [[UIBarButtonItem alloc] initWithTitle:@"Logout" style:UIBarButtonItemStylePlain target:self action:@selector(logoutButtonTapped:)];
     [self.navigationItem setLeftBarButtonItem:logoutItem];
@@ -67,8 +70,13 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSearchForText:(NSString *)searchText completion:(void (^)(NSSet *filteredParticipants))completion
 {
-    [[ATLPDataSource sharedManager] localQueryForUserWithName:searchText completion:^(NSArray *participants) {
-        if (completion) completion([NSSet setWithArray:participants]);
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+        if (!error) {
+            if (completion) completion([NSSet setWithArray:participants]);
+        } else {
+            if (completion) completion(nil);
+            NSLog(@"Error searching for Users by name: %@", error);
+        }
     }];
 }
 
@@ -79,7 +87,28 @@
     if ([conversation.metadata valueForKey:@"title"]){
         return [conversation.metadata valueForKey:@"title"];
     } else {
-        return [[ATLPDataSource sharedManager] titleForConversation:conversation];
+        NSArray *unresolvedParticipants = [[ATLPUserDataSource sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
+        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
+        
+        if ([unresolvedParticipants count]) {
+            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
+                if (!error) {
+                    if (participants.count) {
+                        [self.tableView reloadData];
+                    }
+                } else {
+                    NSLog(@"Error querying for Users: %@", error);
+                }
+            }];
+        }
+        
+        if ([resolvedNames count] && [unresolvedParticipants count]) {
+            return [NSString stringWithFormat:@"%@ and %lu others", [resolvedNames componentsJoinedByString:@", "], (unsigned long)[unresolvedParticipants count]];
+        } else if ([resolvedNames count] && [unresolvedParticipants count] == 0) {
+            return [NSString stringWithFormat:@"%@", [resolvedNames componentsJoinedByString:@", "]];
+        } else {
+            return [NSString stringWithFormat:@"Conversation with %lu users...", (unsigned long)conversation.participants.count];
+        }
     }
 }
 
