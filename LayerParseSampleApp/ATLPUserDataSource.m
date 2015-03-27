@@ -55,61 +55,63 @@
 
 #pragma mark Query Methods
 
-- (void)localQueryForUserWithName:(NSString*)searchText completion:(void (^)(NSArray *participants))completion
+- (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *, NSError *))completion
 {
     PFQuery *query = [PFUser query];
-    [query fromLocalDatastore];
     [query whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSMutableArray *contacts = [NSMutableArray new];
-        for (PFUser *user in objects){
-            if ([user.fullName rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound) {
-                [contacts addObject:user];
+        if (!error) {
+            NSMutableArray *contacts = [NSMutableArray new];
+            for (PFUser *user in objects){
+                if ([user.fullName rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound) {
+                    [contacts addObject:user];
+                }
             }
+            if (completion) completion([NSArray arrayWithArray:contacts], nil);
+        } else {
+            if (completion) completion(nil, error);
         }
-        if (completion) completion([NSArray arrayWithArray:contacts]);
     }];
 }
 
-- (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *))completion
+- (void)queryForAllUsersWithCompletion:(void (^)(NSArray *, NSError *))completion
 {
     PFQuery *query = [PFUser query];
     [query whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        NSMutableArray *contacts = [NSMutableArray new];
-        for (PFUser *user in objects){
-            if ([user.fullName rangeOfString:searchText options:NSCaseInsensitiveSearch].location != NSNotFound) {
-                [contacts addObject:user];
-            }
+        if (!error) {
+            if (completion) completion(objects, nil);
+        } else {
+            if (completion) completion(nil, error);
         }
-        if (completion) completion([NSArray arrayWithArray:contacts]);
     }];
 }
 
-- (void)queryForAllUsersWithCompletion:(void (^)(NSArray *))completion
-{
-    PFQuery *query = [PFUser query];
-    [query whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (completion) completion(objects);
-    }];
-}
-
-- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *))completion
+- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *, NSError *))completion
 {
     PFQuery *query = [PFUser query];
     [query whereKey:@"objectId" containedIn:userIDs];
     
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (completion) completion(objects);
-        
-        for (PFUser *user in objects) {
-            [self cacheUserIfNeeded:user];
+        if (!error) {
+            for (PFUser *user in objects) {
+                [self cacheUserIfNeeded:user];
+            }
+            if (completion) completion(objects, nil);
+        } else {
+            if (completion) completion(nil, error);
         }
     }];
+}
+
+- (PFUser *)cachedUserForUserID:(NSString *)userID
+{
+    if ([self.userCache objectForKey:userID]) {
+        return [self.userCache objectForKey:userID];
+    }
+    return nil;
 }
 
 - (void)cacheUserIfNeeded:(PFUser *)user
@@ -144,14 +146,6 @@
         }
     }
     return [NSArray arrayWithArray:array];
-}
-
-- (PFUser *)cachedUserForUserID:(NSString *)userID
-{
-    if ([self.userCache objectForKey:userID]) {
-        return [self.userCache objectForKey:userID];
-    }
-    return nil;
 }
 
 @end

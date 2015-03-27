@@ -70,8 +70,13 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSearchForText:(NSString *)searchText completion:(void (^)(NSSet *filteredParticipants))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants) {
-        if (completion) completion([NSSet setWithArray:participants]);
+    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+        if (!error) {
+            if (completion) completion([NSSet setWithArray:participants]);
+        } else {
+            if (completion) completion(nil);
+            NSLog(@"Error searching for Users by name: %@", error);
+        }
     }];
 }
 
@@ -86,9 +91,13 @@
         NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
         
         if ([unresolvedParticipants count]) {
-            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants) {
-                if (participants.count) {
-                    [self.tableView reloadData];
+            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
+                if (!error) {
+                    if (participants.count) {
+                        [self.tableView reloadData];
+                    }
+                } else {
+                    NSLog(@"Error querying for Users: %@", error);
                 }
             }];
         }
