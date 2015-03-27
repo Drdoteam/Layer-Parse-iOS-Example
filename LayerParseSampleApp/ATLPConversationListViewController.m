@@ -80,7 +80,7 @@
         return [conversation.metadata valueForKey:@"title"];
     } else {
         NSArray *unresolvedParticipants = [[ATLPUserDataSource sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
-        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesForParticipants:[conversation.participants allObjects]];
+        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
         
         if ([unresolvedParticipants count]) {
             [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants) {

@@ -154,9 +154,7 @@
 - (void)loginLayer
 {
     [SVProgressHUD show];
-    
-    //[[ATLPUserDataSource sharedManager] createLocalParseUsers];
-    
+        
     // Connect to Layer
     // See "Quick Start - Connect" for more details
     // https://developer.layer.com/docs/quick-start/ios#connect

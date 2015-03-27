@@ -26,9 +26,13 @@
 
 + (instancetype)sharedManager;
 
+// Query methods
 - (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants))completion;
 
 - (void)queryForAllUsersWithCompletion:(void (^)(NSArray *users))completion;
+
+// Cache methods
+- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants))completion;
 
 - (PFUser *)cachedUserForUserID:(NSString *)userID;
 
@@ -36,10 +40,6 @@
 
 - (NSArray *)unCachedUserIDsFromParticipants:(NSArray *)participants;
 
-- (NSArray *)resolvedNamesForParticipants:(NSArray *)participants;
-
-- (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants))completion;
-
-- (void)createLocalParseUsers;
+- (NSArray *)resolvedNamesFromParticipants:(NSArray *)participants;
 
 @end

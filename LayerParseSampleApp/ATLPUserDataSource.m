@@ -133,7 +133,7 @@
     return [NSArray arrayWithArray:array];
 }
 
-- (NSArray *)resolvedNamesForParticipants:(NSArray *)participants
+- (NSArray *)resolvedNamesFromParticipants:(NSArray *)participants
 {
     NSMutableArray *array = [NSMutableArray new];
     for (NSString *userID in participants) {
