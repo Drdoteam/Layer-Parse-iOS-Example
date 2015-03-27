@@ -30,9 +30,9 @@
 
 @implementation ATLPAppDelegate
 
-static NSString *const ATLPLayerAppIDString = @"44a270b6-7c58-11e4-bbba-fcf307000352";
-static NSString *const ParseAppIDString = @"hQvFXx927IAtRepgc8qL9riePQozaYgGXzSpxyNd";
-static NSString *const ParseClientKeyString = @"hHnDw8qFmZuDtvasWrbo3id2RUya4q5nHbgnF2fA";
+static NSString *const ATLPLayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
+static NSString *const ParseAppIDString = @"tvlO2I2SxjPIob2a3SNdNKJcgiSWCmBwxrF6llkN";
+static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT9pmixokZ";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

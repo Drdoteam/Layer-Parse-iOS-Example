@@ -40,7 +40,6 @@
 
 - (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants))completion;
 
-//Data Creation Methods
-- (void)createLocalParseUsersIfNeeded;
+- (void)createLocalParseUsers;
 
 @end

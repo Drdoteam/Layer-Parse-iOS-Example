@@ -88,17 +88,6 @@
     }];
 }
 
-- (void)localQueryForAllUsersWithCompletion:(void (^)(NSArray *users))completion
-{
-    PFQuery *query = [PFUser query];
-    [query fromLocalDatastore];
-    [query whereKey:@"objectId" notEqualTo:[PFUser currentUser].objectId];
-    
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (completion) completion(objects);
-    }];
-}
-
 - (void)queryForAllUsersWithCompletion:(void (^)(NSArray *))completion
 {
     PFQuery *query = [PFUser query];
@@ -148,6 +137,7 @@
 {
     NSMutableArray *array = [NSMutableArray new];
     for (NSString *userID in participants) {
+        if ([userID isEqualToString:[PFUser currentUser].objectId]) continue;
         if ([self.userCache objectForKey:userID]) {
             PFUser *user = [self.userCache objectForKey:userID];
             [array addObject:user.firstName];
@@ -162,31 +152,6 @@
         return [self.userCache objectForKey:userID];
     }
     return nil;
-}
-
-#pragma mark Data Creation Methods
-
-- (void)createLocalParseUsersIfNeeded
-{
-    PFQuery *localQuery = [PFUser query];
-    [localQuery fromLocalDatastore];
-    [localQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (objects.count <= 1){
-            [self createUserWithUsername:@"Bob"];
-            [self createUserWithUsername:@"Jane"];
-        }
-    }];
-}
-
-- (void)createUserWithUsername:(NSString *)username
-{
-    PFUser *user = [PFUser new];
-    user.username = username;
-    user.objectId = [NSString stringWithFormat:@"ATLP%@", user.avatarInitials];
-    [user pinInBackground];
-    
-    [self cacheUserIfNeeded:user];
-    
 }
 
 @end
