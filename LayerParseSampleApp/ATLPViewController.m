@@ -47,13 +47,12 @@
         UIImage *loginBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:4.0f];
         [self.logInViewController.logInView.signUpButton setBackgroundImage:loginBackgroundImage forState:UIControlStateNormal];
         
-        self.logInViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
         self.self.logInViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         self.logInViewController.fields = (PFLogInFieldsUsernameAndPassword |
                                            PFLogInFieldsLogInButton |
                                            PFLogInFieldsSignUpButton |
                                            PFLogInFieldsPasswordForgotten);
-        [self.logInViewController setDelegate:self]; // Set ourselves as the delegate
+        self.logInViewController.delegate = self;
         UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         logoImageView.contentMode = UIViewContentModeScaleAspectFit;
         self.logInViewController.logInView.logo = logoImageView;
@@ -63,7 +62,7 @@
         UIImage *signupBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:0.0f];
         [signUpViewController.signUpView.signUpButton setBackgroundImage:signupBackgroundImage forState:UIControlStateNormal];
         [self.logInViewController setSignUpController:signUpViewController];
-        [signUpViewController setDelegate:self];
+        signUpViewController.delegate = self;
         UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         signupImageView.contentMode = UIViewContentModeScaleAspectFit;
         signUpViewController.signUpView.logo = signupImageView;
