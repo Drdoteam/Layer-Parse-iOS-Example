@@ -38,18 +38,12 @@ In order to populate the sample app with content, you must configure the followi
 
 ## Credits
 
-This project was lovingly crafted in San Francisco by Abir Majumdar and Kabir Mahal during their work on [Layer](http://layer.com). At Layer, we are building the Communications Layer for the Internet. We value, support, and create works of Open Source engineering excellence.
+This project was lovingly crafted in San Francisco. At Layer, we are building the full-stack building block for communications. We value, support, and create works of Open Source engineering excellence.
 
-Abir Majumdar
-
-- [http://github.com/maju6406](http://github.com/maju6406)
-- [http://twitter.com/beersy](http://twitter.com/beersy)
-- [abir@layer.com](mailto:abir@layer.com)
-
-Kabir Mahal
-
-- [https://github.com/kmahal/](https://github.com/kmahal/)
-- [kabir@layer.com](mailto:abir@layer.com)
+* [Abir Majumdar](http://github.com/maju6406)
+* [Kabir Mahal](https://github.com/kmahal/)
+* [Blake Watters](https://github.com/blakewatters)
+* [Tomaž Štolfa](https://twitter.com/tomazstolfa)
 
 ## License
 
