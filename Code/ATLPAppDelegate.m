@@ -18,15 +18,11 @@
 //  limitations under the License.
 //
 
-#import "ATLPAppDelegate.h"
+#import <LayerKit/LayerKit.h>
 #import <Parse/Parse.h>
 #import <PFFacebookUtils.h>
+#import "ATLPAppDelegate.h"
 #import "ATLPViewController.h"
-#import <LayerKit/LayerKit.h>
-
-@interface ATLPAppDelegate ()
-
-@end
 
 @implementation ATLPAppDelegate
 
@@ -54,7 +50,7 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
     LYRClient *layerClient = [LYRClient clientWithAppID:appID];
     
     // Show View Controller
-    ATLPViewController *controller = [[ATLPViewController alloc] init];
+    ATLPViewController *controller = [ATLPViewController new];
     controller.layerClient = layerClient;
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];

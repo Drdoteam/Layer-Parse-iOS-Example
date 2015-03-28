@@ -18,12 +18,12 @@
 //  limitations under the License.
 //
 
-#import "ATLPConversationViewController.h"
-#import "ATLPParticipantTableViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
-#import "ATLPUserDataSource.h"
 #import <Bolts/Bolts.h>
+#import "ATLPConversationViewController.h"
+#import "ATLPParticipantTableViewController.h"
+#import "ATLPUserDataSource.h"
 
 @interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 
@@ -78,11 +78,12 @@
 - (id<ATLParticipant>)conversationViewController:(ATLConversationViewController *)conversationViewController participantForIdentifier:(NSString *)participantIdentifier
 {
     PFUser *user = [[ATLPUserDataSource sharedManager] cachedUserForUserID:participantIdentifier];
-    
     if (!user) {
         [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
-            if (!error) {
-                [self.dataSource conversationViewController:conversationViewController participantForIdentifier:participantIdentifier];
+            if (participants && error == nil) {
+                [self.addressBarController reloadView];
+                // TODO: Need a good way to refresh all the messages for the refreshed participants...
+                [self reloadCellsForMessagesSentByParticipantWithIdentitifier:participantIdentifier];
             } else {
                 NSLog(@"Error querying for users: %@", error);
             }

@@ -22,10 +22,6 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
 
-@interface ATLPViewController ()
-
-@end
-
 @implementation ATLPViewController
 
 - (void)viewDidAppear:(BOOL)animated

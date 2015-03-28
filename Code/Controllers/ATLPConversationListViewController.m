@@ -26,7 +26,9 @@
 #import <ATLConstants.h>
 
 @interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
+
 @property (nonatomic) NSArray *usersArray;
+
 @end
 
 @implementation ATLPConversationListViewController
@@ -94,7 +96,7 @@
             [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
                 if (!error) {
                     if (participants.count) {
-                        [self.tableView reloadData];
+                        [self reloadCellForConversation:conversation];
                     }
                 } else {
                     NSLog(@"Error querying for Users: %@", error);
@@ -110,12 +112,6 @@
             return [NSString stringWithFormat:@"Conversation with %lu users...", (unsigned long)conversation.participants.count];
         }
     }
-}
-
-// optional
-- (id<ATLAvatarItem>)conversationListViewController:(ATLConversationListViewController *)conversationListViewController avatarItemForConversation:(LYRConversation *)conversation
-{
-    return nil;
 }
 
 #pragma mark - Actions
