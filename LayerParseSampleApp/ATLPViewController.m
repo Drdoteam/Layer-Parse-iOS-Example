@@ -21,6 +21,13 @@
 #import "ATLPViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
+#import <ATLConstants.h>
+
+@interface PFImage : UIImage
+
++ (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
+
+@end
 
 @interface ATLPViewController ()
 
@@ -35,6 +42,11 @@
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         self.logInViewController = [[PFLogInViewController alloc] init];
+        
+        [self.logInViewController.logInView.passwordForgottenButton setTitleColor:ATLBlueColor() forState:UIControlStateNormal];
+        UIImage *loginBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:4.0f];
+        [self.logInViewController.logInView.signUpButton setBackgroundImage:loginBackgroundImage forState:UIControlStateNormal];
+        
         self.logInViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
         self.self.logInViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         self.logInViewController.fields = (PFLogInFieldsUsernameAndPassword |
@@ -48,6 +60,8 @@
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        UIImage *signupBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:0.0f];
+        [signUpViewController.signUpView.signUpButton setBackgroundImage:signupBackgroundImage forState:UIControlStateNormal];
         [self.logInViewController setSignUpController:signUpViewController];
         [signUpViewController setDelegate:self];
         UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
