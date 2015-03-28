@@ -1,6 +1,10 @@
+![Atlas+Parse Header](Assets/Atlas-Layer-Parse-github-header.png)
+
 # LayerParseSampleApp
 
 LayerParseSampleApp is a sample application highlighting how to integrate Layer with a [Parse](http://parse.com) backend. It presents a very simple example of a chat app.
+
+![Atlas+Parse Image](Assets/Atlas-Layer-Parse-github.png)
 
 ## Requirements
 
@@ -8,11 +12,15 @@ This application requires Xcode and the iOS SDK v8.0. Dependencies are managed v
 
 ## Setup
 
-1. Create a new [app](https://parse.com/apps) in Parse.
 1. Clone the project from Github: `$ git clone https://github.com/layerhq/LayerParseSampleApp.git`
-2. Install the dependencies via CocoaPods: `$ pod install`
+2. Install the dependencies in the root directory via CocoaPods: `$ pod install`
 3. Open `LayerParseSampleApp.xcworkspace` in Xcode.
-4. Replace `ATLPLayerAppIDString` , `ParseAppIDString` , and `ParseClientKeyString` in ATLPAppDelegate.m with your Parse and Layer credentials. The project will not work if you skip this step.
+4. Replace `ATLPLayerAppIDString` , `ParseAppIDString` , and `ParseClientKeyString` in `ATLPAppDelegate.m` with your Layer and Parse credentials.
+5. Add the [Layer Parse Module](https://github.com/layerhq/layer-parse-module) to your Parse Cloud Code to serve as an authentication manager.
+6. (Recommended) If you want test users, import the User.json file found under Supporting Files from the XCode project into your User class on Parse.
+7. Build and run the application on your Simulator to create a new user and begin messaging!
+
+![Atlas+Parse Gif](Assets/Atlas-Layer-Parse-messenger-github.gif)
 
 ## Highlights
 
