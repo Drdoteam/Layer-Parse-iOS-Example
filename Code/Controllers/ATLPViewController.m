@@ -42,8 +42,7 @@
         [self.logInViewController.logInView.passwordForgottenButton setTitleColor:ATLBlueColor() forState:UIControlStateNormal];
         UIImage *loginBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:4.0f];
         [self.logInViewController.logInView.signUpButton setBackgroundImage:loginBackgroundImage forState:UIControlStateNormal];
-        
-        self.self.logInViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        self.logInViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         self.logInViewController.fields = (PFLogInFieldsUsernameAndPassword |
                                            PFLogInFieldsLogInButton |
                                            PFLogInFieldsSignUpButton |
