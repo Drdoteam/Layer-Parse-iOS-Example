@@ -12,9 +12,9 @@ This application requires Xcode and the iOS SDK v8.0. Dependencies are managed v
 
 ## Setup
 
-1. Clone the project from Github: `$ git clone https://github.com/layerhq/LayerParseSampleApp.git`
+1. Clone the project from Github: `$ git clone https://github.com/layerhq/Layer-Parse-iOS-Example.git`
 2. Install the dependencies in the root directory via CocoaPods: `$ pod install`
-3. Open `LayerParseSampleApp.xcworkspace` in Xcode.
+3. Open `Layer-Parse-iOS-Example.xcworkspace` in Xcode.
 4. Replace `ATLPLayerAppIDString` , `ParseAppIDString` , and `ParseClientKeyString` in `ATLPAppDelegate.m` with your Layer and Parse credentials.
 5. Add the [Layer Parse Module](https://github.com/layerhq/layer-parse-module) to your Parse Cloud Code to serve as an authentication manager.
 6. (Recommended) If you want test users, import the User.json file found under Supporting Files from the XCode project into your User class on Parse.
@@ -47,4 +47,4 @@ This project was lovingly crafted in San Francisco. At Layer, we are building th
 
 ## License
 
-LayerParseSampleApp is available under the Apache 2 License. See the LICENSE file for more info.
+Layer-Parse-iOS-Example is available under the Apache 2 License. See the LICENSE file for more info.
