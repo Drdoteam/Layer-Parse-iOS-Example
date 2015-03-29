@@ -21,6 +21,13 @@
 #import "ATLPViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
+#import <ATLConstants.h>
+
+@interface PFImage : UIImage
+
++ (UIImage *)imageWithColor:(UIColor *)color cornerRadius:(CGFloat)cornerRadius;
+
+@end
 
 @implementation ATLPViewController
 
@@ -31,21 +38,27 @@
     if (![PFUser currentUser]) { // No user logged in
         // Create the log in view controller
         self.logInViewController = [[PFLogInViewController alloc] init];
-        self.logInViewController.modalPresentationStyle = UIModalPresentationOverFullScreen;
+        
+        [self.logInViewController.logInView.passwordForgottenButton setTitleColor:ATLBlueColor() forState:UIControlStateNormal];
+        UIImage *loginBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:4.0f];
+        [self.logInViewController.logInView.signUpButton setBackgroundImage:loginBackgroundImage forState:UIControlStateNormal];
+        
         self.self.logInViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
         self.logInViewController.fields = (PFLogInFieldsUsernameAndPassword |
                                            PFLogInFieldsLogInButton |
                                            PFLogInFieldsSignUpButton |
                                            PFLogInFieldsPasswordForgotten);
-        [self.logInViewController setDelegate:self]; // Set ourselves as the delegate
+        self.logInViewController.delegate = self;
         UIImageView *logoImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         logoImageView.contentMode = UIViewContentModeScaleAspectFit;
         self.logInViewController.logInView.logo = logoImageView;
         
         // Create the sign up view controller
         PFSignUpViewController *signUpViewController = [[PFSignUpViewController alloc] init];
+        UIImage *signupBackgroundImage = [PFImage imageWithColor:ATLBlueColor() cornerRadius:0.0f];
+        [signUpViewController.signUpView.signUpButton setBackgroundImage:signupBackgroundImage forState:UIControlStateNormal];
         [self.logInViewController setSignUpController:signUpViewController];
-        [signUpViewController setDelegate:self];
+        signUpViewController.delegate = self;
         UIImageView *signupImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"LayerParseLogin"]];
         signupImageView.contentMode = UIViewContentModeScaleAspectFit;
         signUpViewController.signUpView.logo = signupImageView;
