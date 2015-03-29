@@ -1,5 +1,5 @@
 //
-//  ParticipantTableViewController.h
+//  ConversationViewController.h
 //  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 2/28/15.
@@ -18,8 +18,11 @@
 //  limitations under the License.
 //
 
-#import "ATLParticipantTableViewController.h"
+#import <Foundation/Foundation.h>
+#import <Atlas/Atlas.h>
+#import <Parse/Parse.h>
+#import "PFUser+ATLParticipant.h"
 
-@interface ATLPParticipantTableViewController : ATLParticipantTableViewController
+@interface ConversationViewController : ATLConversationViewController
 
 @end

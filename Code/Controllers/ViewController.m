@@ -18,7 +18,7 @@
 //  limitations under the License.
 //
 
-#import "ATLPViewController.h"
+#import "ViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
 #import <ATLConstants.h>
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation ATLPViewController
+@implementation ViewController
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -253,7 +253,7 @@
 {
     [SVProgressHUD dismiss];
     
-    ATLPConversationListViewController *controller = [ATLPConversationListViewController  conversationListViewControllerWithLayerClient:self.layerClient];
+    ConversationListViewController *controller = [ConversationListViewController  conversationListViewControllerWithLayerClient:self.layerClient];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

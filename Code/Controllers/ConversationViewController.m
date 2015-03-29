@@ -21,18 +21,18 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
 #import <Bolts/Bolts.h>
-#import "ATLPConversationViewController.h"
-#import "ATLPParticipantTableViewController.h"
+#import "ConversationViewController.h"
+#import "ParticipantTableViewController.h"
 #import "ATLPUserDataSource.h"
 
-@interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
+@interface ConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 
 @property (nonatomic) NSDateFormatter *dateFormatter;
 @property (nonatomic) NSArray *usersArray;
 
 @end
 
-@implementation ATLPConversationViewController
+@implementation ConversationViewController
 
 - (void)viewDidLoad
 {
@@ -131,7 +131,7 @@
 {
     [[ATLPUserDataSource sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
         if (!error) {
-            ATLPParticipantTableViewController *controller = [ATLPParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
+            ParticipantTableViewController *controller = [ParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
             controller.delegate = self;
             
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];

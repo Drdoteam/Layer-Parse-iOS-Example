@@ -21,10 +21,10 @@
 #import <LayerKit/LayerKit.h>
 #import <Parse/Parse.h>
 #import <PFFacebookUtils.h>
-#import "ATLPAppDelegate.h"
-#import "ATLPViewController.h"
+#import "AppDelegate.h"
+#import "ViewController.h"
 
-@implementation ATLPAppDelegate
+@implementation AppDelegate
 
 static NSString *const ATLPLayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
 static NSString *const ParseAppIDString = @"tvlO2I2SxjPIob2a3SNdNKJcgiSWCmBwxrF6llkN";
@@ -50,7 +50,7 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
     LYRClient *layerClient = [LYRClient clientWithAppID:appID];
     
     // Show View Controller
-    ATLPViewController *controller = [ATLPViewController new];
+    ViewController *controller = [ViewController new];
     controller.layerClient = layerClient;
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];

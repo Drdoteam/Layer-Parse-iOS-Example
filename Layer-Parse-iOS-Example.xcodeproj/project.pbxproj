@@ -15,12 +15,12 @@
 		25713D541AC605FC00FC5D38 /* LayerParseSplash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D431AC605FC00FC5D38 /* LayerParseSplash@2x.png */; };
 		25713D551AC605FC00FC5D38 /* parse_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D441AC605FC00FC5D38 /* parse_logo.png */; };
 		25713D561AC605FC00FC5D38 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 25713D451AC605FC00FC5D38 /* Users.json */; };
-		25713D6A1AC6071600FC5D38 /* ATLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */; };
+		25713D6A1AC6071600FC5D38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D591AC6071600FC5D38 /* AppDelegate.m */; };
 		25713D6B1AC6071600FC5D38 /* PFUser+ATLParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D5C1AC6071600FC5D38 /* PFUser+ATLParticipant.m */; };
-		25713D6C1AC6071600FC5D38 /* ATLPConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */; };
-		25713D6D1AC6071600FC5D38 /* ATLPConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */; };
-		25713D6E1AC6071600FC5D38 /* ATLPParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */; };
-		25713D6F1AC6071600FC5D38 /* ATLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D651AC6071600FC5D38 /* ATLPViewController.m */; };
+		25713D6C1AC6071600FC5D38 /* ConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D5F1AC6071600FC5D38 /* ConversationListViewController.m */; };
+		25713D6D1AC6071600FC5D38 /* ConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D611AC6071600FC5D38 /* ConversationViewController.m */; };
+		25713D6E1AC6071600FC5D38 /* ParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D631AC6071600FC5D38 /* ParticipantTableViewController.m */; };
+		25713D6F1AC6071600FC5D38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D651AC6071600FC5D38 /* ViewController.m */; };
 		25713D701AC6071600FC5D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D661AC6071600FC5D38 /* main.m */; };
 		25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */; };
 		5AD49C051AC399DD00B1B0C8 /* LayerParseSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */; };
@@ -49,18 +49,18 @@
 		25713D431AC605FC00FC5D38 /* LayerParseSplash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseSplash@2x.png"; sourceTree = "<group>"; };
 		25713D441AC605FC00FC5D38 /* parse_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parse_logo.png; sourceTree = "<group>"; };
 		25713D451AC605FC00FC5D38 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
-		25713D581AC6071600FC5D38 /* ATLPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPAppDelegate.h; sourceTree = "<group>"; };
-		25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPAppDelegate.m; sourceTree = "<group>"; };
+		25713D581AC6071600FC5D38 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		25713D591AC6071600FC5D38 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		25713D5B1AC6071600FC5D38 /* PFUser+ATLParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ATLParticipant.h"; sourceTree = "<group>"; };
 		25713D5C1AC6071600FC5D38 /* PFUser+ATLParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ATLParticipant.m"; sourceTree = "<group>"; };
-		25713D5E1AC6071600FC5D38 /* ATLPConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationListViewController.h; sourceTree = "<group>"; };
-		25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationListViewController.m; sourceTree = "<group>"; };
-		25713D601AC6071600FC5D38 /* ATLPConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationViewController.h; sourceTree = "<group>"; };
-		25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationViewController.m; sourceTree = "<group>"; };
-		25713D621AC6071600FC5D38 /* ATLPParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPParticipantTableViewController.h; sourceTree = "<group>"; };
-		25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPParticipantTableViewController.m; sourceTree = "<group>"; };
-		25713D641AC6071600FC5D38 /* ATLPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPViewController.h; sourceTree = "<group>"; };
-		25713D651AC6071600FC5D38 /* ATLPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPViewController.m; sourceTree = "<group>"; };
+		25713D5E1AC6071600FC5D38 /* ConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationListViewController.h; sourceTree = "<group>"; };
+		25713D5F1AC6071600FC5D38 /* ConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationListViewController.m; sourceTree = "<group>"; };
+		25713D601AC6071600FC5D38 /* ConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConversationViewController.h; sourceTree = "<group>"; };
+		25713D611AC6071600FC5D38 /* ConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConversationViewController.m; sourceTree = "<group>"; };
+		25713D621AC6071600FC5D38 /* ParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantTableViewController.h; sourceTree = "<group>"; };
+		25713D631AC6071600FC5D38 /* ParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantTableViewController.m; sourceTree = "<group>"; };
+		25713D641AC6071600FC5D38 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		25713D651AC6071600FC5D38 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		25713D661AC6071600FC5D38 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
 		25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 		25713D571AC6071600FC5D38 /* Code */ = {
 			isa = PBXGroup;
 			children = (
-				25713D581AC6071600FC5D38 /* ATLPAppDelegate.h */,
-				25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */,
+				25713D581AC6071600FC5D38 /* AppDelegate.h */,
+				25713D591AC6071600FC5D38 /* AppDelegate.m */,
 				25713D661AC6071600FC5D38 /* main.m */,
 				25713D5A1AC6071600FC5D38 /* Categories */,
 				25713D5D1AC6071600FC5D38 /* Controllers */,
@@ -145,14 +145,14 @@
 		25713D5D1AC6071600FC5D38 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				25713D5E1AC6071600FC5D38 /* ATLPConversationListViewController.h */,
-				25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */,
-				25713D601AC6071600FC5D38 /* ATLPConversationViewController.h */,
-				25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */,
-				25713D621AC6071600FC5D38 /* ATLPParticipantTableViewController.h */,
-				25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */,
-				25713D641AC6071600FC5D38 /* ATLPViewController.h */,
-				25713D651AC6071600FC5D38 /* ATLPViewController.m */,
+				25713D5E1AC6071600FC5D38 /* ConversationListViewController.h */,
+				25713D5F1AC6071600FC5D38 /* ConversationListViewController.m */,
+				25713D601AC6071600FC5D38 /* ConversationViewController.h */,
+				25713D611AC6071600FC5D38 /* ConversationViewController.m */,
+				25713D621AC6071600FC5D38 /* ParticipantTableViewController.h */,
+				25713D631AC6071600FC5D38 /* ParticipantTableViewController.m */,
+				25713D641AC6071600FC5D38 /* ViewController.h */,
+				25713D651AC6071600FC5D38 /* ViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -356,14 +356,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25713D6A1AC6071600FC5D38 /* ATLPAppDelegate.m in Sources */,
-				25713D6C1AC6071600FC5D38 /* ATLPConversationListViewController.m in Sources */,
+				25713D6A1AC6071600FC5D38 /* AppDelegate.m in Sources */,
+				25713D6C1AC6071600FC5D38 /* ConversationListViewController.m in Sources */,
 				25713D6B1AC6071600FC5D38 /* PFUser+ATLParticipant.m in Sources */,
-				25713D6D1AC6071600FC5D38 /* ATLPConversationViewController.m in Sources */,
-				25713D6E1AC6071600FC5D38 /* ATLPParticipantTableViewController.m in Sources */,
+				25713D6D1AC6071600FC5D38 /* ConversationViewController.m in Sources */,
+				25713D6E1AC6071600FC5D38 /* ParticipantTableViewController.m in Sources */,
 				25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */,
 				25713D701AC6071600FC5D38 /* main.m in Sources */,
-				25713D6F1AC6071600FC5D38 /* ATLPViewController.m in Sources */,
+				25713D6F1AC6071600FC5D38 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

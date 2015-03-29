@@ -22,9 +22,9 @@
 #import <Parse/Parse.h>
 #import <ParseUI.h>
 #import <UIKit/UIKit.h>
-#import "ATLPConversationListViewController.h"
+#import "ConversationListViewController.h"
 
-@interface ATLPViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface ViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @property (nonatomic) LYRClient *layerClient;
 @property (nonatomic) PFLogInViewController *logInViewController;

@@ -19,17 +19,17 @@
 //
 
 
-#import "ATLPConversationListViewController.h"
-#import "ATLPConversationViewController.h"
+#import "ConversationListViewController.h"
+#import "ConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
 #import "ATLPUserDataSource.h"
 #import <ATLConstants.h>
 
-@interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
+@interface ConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 
 @end
 
-@implementation ATLPConversationListViewController
+@implementation ConversationListViewController
 
 #pragma mark - Lifecycle Methods
 
@@ -52,7 +52,7 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSelectConversation:(LYRConversation *)conversation
 {
-    ATLPConversationViewController *controller = [ATLPConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
+    ConversationViewController *controller = [ConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
     controller.conversation = conversation;
     controller.displaysAddressBar = YES;
     [self.navigationController pushViewController:controller animated:YES];
@@ -116,7 +116,7 @@
 
 - (void)composeButtonTapped:(id)sender
 {
-    ATLPConversationViewController *controller = [ATLPConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
+    ConversationViewController *controller = [ConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
     controller.displaysAddressBar = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }

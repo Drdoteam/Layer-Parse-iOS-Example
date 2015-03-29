@@ -1,8 +1,8 @@
 //
-//  ConversationViewController.h
+//  AppDelegate.h
 //  Layer-Parse-iOS-Example
 //
-//  Created by Abir Majumdar on 2/28/15.
+//  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,11 +18,10 @@
 //  limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-#import <Atlas/Atlas.h>
-#import <Parse/Parse.h>
-#import "PFUser+ATLParticipant.h"
+#import <UIKit/UIKit.h>
 
-@interface ATLPConversationViewController : ATLConversationViewController
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
 
 @end
