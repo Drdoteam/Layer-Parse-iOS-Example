@@ -27,8 +27,6 @@
 
 @interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 
-@property (nonatomic) NSArray *usersArray;
-
 @end
 
 @implementation ATLPConversationListViewController
