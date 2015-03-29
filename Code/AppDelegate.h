@@ -1,6 +1,6 @@
 //
-//  ViewController.h
-//  LayerParseSampleApp
+//  AppDelegate.h
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -18,15 +18,10 @@
 //  limitations under the License.
 //
 
-#import <LayerKit/LayerKit.h>
-#import <Parse/Parse.h>
-#import <ParseUI.h>
 #import <UIKit/UIKit.h>
-#import "ATLPConversationListViewController.h"
 
-@interface ATLPViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic) LYRClient *layerClient;
-@property (nonatomic) PFLogInViewController *logInViewController;
+@property (strong, nonatomic) UIWindow *window;
 
 @end

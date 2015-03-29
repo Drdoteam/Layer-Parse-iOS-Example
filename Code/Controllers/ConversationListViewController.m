@@ -1,6 +1,6 @@
 //
 //  ConversationListViewController.m
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 2/28/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -19,17 +19,17 @@
 //
 
 
-#import "ATLPConversationListViewController.h"
-#import "ATLPConversationViewController.h"
+#import "ConversationListViewController.h"
+#import "ConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 #import <ATLConstants.h>
 
-@interface ATLPConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
+@interface ConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
 
 @end
 
-@implementation ATLPConversationListViewController
+@implementation ConversationListViewController
 
 #pragma mark - Lifecycle Methods
 
@@ -52,7 +52,7 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSelectConversation:(LYRConversation *)conversation
 {
-    ATLPConversationViewController *controller = [ATLPConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
+    ConversationViewController *controller = [ConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
     controller.conversation = conversation;
     controller.displaysAddressBar = YES;
     [self.navigationController pushViewController:controller animated:YES];
@@ -70,7 +70,7 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSearchForText:(NSString *)searchText completion:(void (^)(NSSet *filteredParticipants))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion([NSSet setWithArray:participants]);
         } else {
@@ -87,11 +87,11 @@
     if ([conversation.metadata valueForKey:@"title"]){
         return [conversation.metadata valueForKey:@"title"];
     } else {
-        NSArray *unresolvedParticipants = [[ATLPUserDataSource sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
-        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
+        NSArray *unresolvedParticipants = [[UserManager sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
+        NSArray *resolvedNames = [[UserManager sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
         
         if ([unresolvedParticipants count]) {
-            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
+            [[UserManager sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
                 if (!error) {
                     if (participants.count) {
                         [self reloadCellForConversation:conversation];
@@ -116,7 +116,7 @@
 
 - (void)composeButtonTapped:(id)sender
 {
-    ATLPConversationViewController *controller = [ATLPConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
+    ConversationViewController *controller = [ConversationViewController conversationViewControllerWithLayerClient:self.layerClient];
     controller.displaysAddressBar = YES;
     [self.navigationController pushViewController:controller animated:YES];
 }

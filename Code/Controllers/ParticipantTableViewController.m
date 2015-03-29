@@ -1,6 +1,6 @@
 //
-//  ConversationViewController.h
-//  LayerParseTest
+//  ParticipantTableViewController.m
+//  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 2/28/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -18,11 +18,25 @@
 //  limitations under the License.
 //
 
-#import <Foundation/Foundation.h>
-#import <Atlas/Atlas.h>
-#import <Parse/Parse.h>
-#import "PFUser+ATLParticipant.h"
+#import "ParticipantTableViewController.h"
 
-@interface ATLPConversationViewController : ATLConversationViewController
+@implementation ParticipantTableViewController
+
+#pragma mark - Lifecycle Methods
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(handleCancelTap)];
+    self.navigationItem.leftBarButtonItem = cancelItem;
+}
+
+#pragma mark - Actions
+
+- (void)handleCancelTap
+{
+    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

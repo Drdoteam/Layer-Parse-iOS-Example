@@ -1,6 +1,6 @@
 //
 //  ConversationViewController.m
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 2/28/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -21,18 +21,18 @@
 #import <SVProgressHUD/SVProgressHUD.h>
 #import <Parse/Parse.h>
 #import <Bolts/Bolts.h>
-#import "ATLPConversationViewController.h"
-#import "ATLPParticipantTableViewController.h"
-#import "ATLPUserDataSource.h"
+#import "ConversationViewController.h"
+#import "ParticipantTableViewController.h"
+#import "UserManager.h"
 
-@interface ATLPConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
+@interface ConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 
 @property (nonatomic) NSDateFormatter *dateFormatter;
 @property (nonatomic) NSArray *usersArray;
 
 @end
 
-@implementation ATLPConversationViewController
+@implementation ConversationViewController
 
 - (void)viewDidLoad
 {
@@ -77,9 +77,9 @@
 
 - (id<ATLParticipant>)conversationViewController:(ATLConversationViewController *)conversationViewController participantForIdentifier:(NSString *)participantIdentifier
 {
-    PFUser *user = [[ATLPUserDataSource sharedManager] cachedUserForUserID:participantIdentifier];
+    PFUser *user = [[UserManager sharedManager] cachedUserForUserID:participantIdentifier];
     if (!user) {
-        [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
+        [[UserManager sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
             if (participants && error == nil) {
                 [self.addressBarController reloadView];
                 // TODO: Need a good way to refresh all the messages for the refreshed participants...
@@ -129,9 +129,9 @@
 
 - (void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController didTapAddContactsButton:(UIButton *)addContactsButton
 {
-    [[ATLPUserDataSource sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
+    [[UserManager sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
         if (!error) {
-            ATLPParticipantTableViewController *controller = [ATLPParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
+            ParticipantTableViewController *controller = [ParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
             controller.delegate = self;
             
             UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:controller];
@@ -144,7 +144,7 @@
 
 -(void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController searchForParticipantsMatchingText:(NSString *)searchText completion:(void (^)(NSArray *))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion(participants);
         } else {
@@ -165,7 +165,7 @@
 
 - (void)participantTableViewController:(ATLParticipantTableViewController *)participantTableViewController didSearchWithString:(NSString *)searchText completion:(void (^)(NSSet *))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion([NSSet setWithArray:participants]);
         } else {

@@ -1,6 +1,6 @@
 //
-//  ATLPDataSource.h
-//  LayerParseTest
+//  UserManager.h
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -19,19 +19,26 @@
 //
 
 #import <Foundation/Foundation.h>
+
 @class PFUser;
 @class LYRConversation;
 
-@interface ATLPUserDataSource : NSObject
+@interface UserManager : NSObject
 
 + (instancetype)sharedManager;
 
-// Query methods
+///-------------------------
+/// @name Querying for Users
+///-------------------------
+
 - (void)queryForUserWithName:(NSString *)searchText completion:(void (^)(NSArray *participants, NSError *error))completion;
 
 - (void)queryForAllUsersWithCompletion:(void (^)(NSArray *users, NSError *error))completion;
 
-// Cache methods
+///---------------------------
+/// @name Accessing User Cache
+///---------------------------
+
 - (void)queryAndCacheUsersWithIDs:(NSArray *)userIDs completion:(void (^)(NSArray *participants, NSError *error))completion;
 
 - (PFUser *)cachedUserForUserID:(NSString *)userID;

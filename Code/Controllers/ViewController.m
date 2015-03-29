@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  LayerParseSampleApp
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -18,9 +18,9 @@
 //  limitations under the License.
 //
 
-#import "ATLPViewController.h"
+#import "ViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 #import <ATLConstants.h>
 
 @interface PFImage : UIImage
@@ -29,7 +29,7 @@
 
 @end
 
-@implementation ATLPViewController
+@implementation ViewController
 
 - (void)viewDidAppear:(BOOL)animated
 {
@@ -253,7 +253,7 @@
 {
     [SVProgressHUD dismiss];
     
-    ATLPConversationListViewController *controller = [ATLPConversationListViewController  conversationListViewControllerWithLayerClient:self.layerClient];
+    ConversationListViewController *controller = [ConversationListViewController  conversationListViewControllerWithLayerClient:self.layerClient];
     [self.navigationController pushViewController:controller animated:YES];
 }
 

@@ -1,6 +1,6 @@
 //
 //  main.m
-//  LayerParseSampleApp
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -19,10 +19,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ATLPAppDelegate.h"
+#import "AppDelegate.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([ATLPAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

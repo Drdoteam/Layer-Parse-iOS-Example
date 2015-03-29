@@ -1,8 +1,7 @@
 //
-//  ParticipantTableViewController.h
-//  LayerParseTest
+//  ConversationListViewController.h
+//  Layer-Parse-iOS-Example
 //
-//  Created by Abir Majumdar on 2/28/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,8 +17,12 @@
 //  limitations under the License.
 //
 
-#import "ATLParticipantTableViewController.h"
+#import <UIKit/UIKit.h>
+#import <Atlas/Atlas.h>
+#import <ParseUI.h>
+#import "PFUser+ATLParticipant.h"
+#import "ViewController.h"
 
-@interface ATLPParticipantTableViewController : ATLParticipantTableViewController
+@interface ConversationListViewController : ATLConversationListViewController
 
 @end

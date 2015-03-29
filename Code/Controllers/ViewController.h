@@ -1,7 +1,8 @@
 //
-//  ConversationListViewController.h
-//  LayerParseTest
+//  ViewController.h
+//  Layer-Parse-iOS-Example
 //
+//  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,12 +18,15 @@
 //  limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
-#import <Atlas/Atlas.h>
+#import <LayerKit/LayerKit.h>
+#import <Parse/Parse.h>
 #import <ParseUI.h>
-#import "PFUser+ATLParticipant.h"
-#import "ATLPViewController.h"
+#import <UIKit/UIKit.h>
+#import "ConversationListViewController.h"
 
-@interface ATLPConversationListViewController : ATLConversationListViewController
+@interface ViewController : UIViewController <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+
+@property (nonatomic) LYRClient *layerClient;
+@property (nonatomic) PFLogInViewController *logInViewController;
 
 @end

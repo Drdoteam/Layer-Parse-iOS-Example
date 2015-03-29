@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  LayerParseSampleApp
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
@@ -21,12 +21,12 @@
 #import <LayerKit/LayerKit.h>
 #import <Parse/Parse.h>
 #import <PFFacebookUtils.h>
-#import "ATLPAppDelegate.h"
-#import "ATLPViewController.h"
+#import "AppDelegate.h"
+#import "ViewController.h"
 
-@implementation ATLPAppDelegate
+@implementation AppDelegate
 
-static NSString *const ATLPLayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
+static NSString *const LayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
 static NSString *const ParseAppIDString = @"tvlO2I2SxjPIob2a3SNdNKJcgiSWCmBwxrF6llkN";
 static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT9pmixokZ";
 
@@ -34,9 +34,8 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //enable Parse local data store for user persistence
+    // Enable Parse local data store for user persistence
     [Parse enableLocalDatastore];
-    // Set up Parse
     [Parse setApplicationId:ParseAppIDString
                   clientKey:ParseClientKeyString];
     
@@ -46,11 +45,11 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Initializes a LYRClient object
-    NSUUID *appID = [[NSUUID alloc] initWithUUIDString:ATLPLayerAppIDString];
+    NSUUID *appID = [[NSUUID alloc] initWithUUIDString:LayerAppIDString];
     LYRClient *layerClient = [LYRClient clientWithAppID:appID];
     
     // Show View Controller
-    ATLPViewController *controller = [ATLPViewController new];
+    ViewController *controller = [ViewController new];
     controller.layerClient = layerClient;
     
     self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:controller];
