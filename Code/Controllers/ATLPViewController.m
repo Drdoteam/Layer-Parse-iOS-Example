@@ -29,10 +29,6 @@
 
 @end
 
-@interface ATLPViewController ()
-
-@end
-
 @implementation ATLPViewController
 
 - (void)viewDidAppear:(BOOL)animated
