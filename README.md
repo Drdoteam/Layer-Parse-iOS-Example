@@ -2,7 +2,7 @@
 
 # Layer + Parse iOS Example
 
-This repository contains an example project that demonstrates how to implement an iOS chat application with messaging services provided by [Layer](https://layer.com) and a user backend provided by [Parse](http://parse.com).
+This repository contains an example project that demonstrates how to implement an iOS chat application with messaging services provided by [Layer](https://layer.com), user interface components from [Atlas](https://github.com/layerhq/Atlas-iOS) and a user backend provided by [Parse](http://parse.com).
 
 ![Atlas+Parse Image](Assets/Atlas-Layer-Parse-github.png)
 
