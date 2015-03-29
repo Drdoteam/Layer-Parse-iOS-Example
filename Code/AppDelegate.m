@@ -26,7 +26,7 @@
 
 @implementation AppDelegate
 
-static NSString *const ATLPLayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
+static NSString *const LayerAppIDString = @"cdc39baa-d49f-11e4-9cf4-bb1f0000070e";
 static NSString *const ParseAppIDString = @"tvlO2I2SxjPIob2a3SNdNKJcgiSWCmBwxrF6llkN";
 static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT9pmixokZ";
 
@@ -46,7 +46,7 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
     // Initializes a LYRClient object
-    NSUUID *appID = [[NSUUID alloc] initWithUUIDString:ATLPLayerAppIDString];
+    NSUUID *appID = [[NSUUID alloc] initWithUUIDString:LayerAppIDString];
     LYRClient *layerClient = [LYRClient clientWithAppID:appID];
     
     // Show View Controller
