@@ -1,8 +1,8 @@
 ![Atlas+Parse Header](Assets/Atlas-Layer-Parse-github-header.png)
 
-# LayerParseSampleApp
+# Layer + Parse iOS Example
 
-LayerParseSampleApp is a sample application highlighting how to integrate Layer with a [Parse](http://parse.com) backend. It presents a very simple example of a chat app.
+This repository contains an example project that demonstrates how to implement an iOS chat application with messaging services provided by [Layer](https://layer.com) and a user backend provided by [Parse](http://parse.com).
 
 ![Atlas+Parse Image](Assets/Atlas-Layer-Parse-github.png)
 
