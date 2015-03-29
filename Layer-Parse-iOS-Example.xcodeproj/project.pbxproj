@@ -22,7 +22,7 @@
 		25713D6E1AC6071600FC5D38 /* ParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D631AC6071600FC5D38 /* ParticipantTableViewController.m */; };
 		25713D6F1AC6071600FC5D38 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D651AC6071600FC5D38 /* ViewController.m */; };
 		25713D701AC6071600FC5D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D661AC6071600FC5D38 /* main.m */; };
-		25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */; };
+		25713D711AC6071600FC5D38 /* UserManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D691AC6071600FC5D38 /* UserManager.m */; };
 		5AD49C051AC399DD00B1B0C8 /* LayerParseSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */; };
 		DE21CBC9179B78114E756630 /* libPods-Layer-Parse-iOS-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB020A6C940784334B46A30 /* libPods-Layer-Parse-iOS-Example.a */; };
 /* End PBXBuildFile section */
@@ -61,8 +61,8 @@
 		25713D641AC6071600FC5D38 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		25713D651AC6071600FC5D38 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		25713D661AC6071600FC5D38 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
-		25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
+		25713D681AC6071600FC5D38 /* UserManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserManager.h; sourceTree = "<group>"; };
+		25713D691AC6071600FC5D38 /* UserManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserManager.m; sourceTree = "<group>"; };
 		4499B2833234A6B927451A87 /* Pods-Layer-Parse-iOS-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layer-Parse-iOS-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Layer-Parse-iOS-Example/Pods-Layer-Parse-iOS-Example.release.xcconfig"; sourceTree = "<group>"; };
 		5AD49BE51AC399DD00B1B0C8 /* Layer-Parse-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Layer-Parse-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD49BFE1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Layer-Parse-iOS-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,8 +158,8 @@
 		25713D671AC6071600FC5D38 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */,
-				25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */,
+				25713D681AC6071600FC5D38 /* UserManager.h */,
+				25713D691AC6071600FC5D38 /* UserManager.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,7 +358,7 @@
 				25713D6B1AC6071600FC5D38 /* PFUser+ATLParticipant.m in Sources */,
 				25713D6D1AC6071600FC5D38 /* ConversationViewController.m in Sources */,
 				25713D6E1AC6071600FC5D38 /* ParticipantTableViewController.m in Sources */,
-				25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */,
+				25713D711AC6071600FC5D38 /* UserManager.m in Sources */,
 				25713D701AC6071600FC5D38 /* main.m in Sources */,
 				25713D6F1AC6071600FC5D38 /* ViewController.m in Sources */,
 			);

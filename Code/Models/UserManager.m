@@ -1,5 +1,5 @@
 //
-//  ATLPDataSource.m
+//  UserManager.m
 //  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
@@ -18,34 +18,35 @@
 //  limitations under the License.
 //
 
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 #import <Parse/Parse.h>
 #import "PFUser+ATLParticipant.h"
 #import <Bolts/Bolts.h>
 
-@interface ATLPUserDataSource ()
+@interface UserManager ()
 
 @property (nonatomic) NSCache *userCache;
 
 @end
 
-@implementation ATLPUserDataSource
+@implementation UserManager
 
 #pragma mark - Public Methods
 
-+ (instancetype)sharedManager {
-    static ATLPUserDataSource *sharedInstance = nil;
++ (instancetype)sharedManager
+{
+    static UserManager *sharedInstance = nil;
     static dispatch_once_t pred;
     
     dispatch_once(&pred, ^{
-        sharedInstance = [[ATLPUserDataSource alloc] init];
+        sharedInstance = [[UserManager alloc] init];
     });
     
     return sharedInstance;
 }
 
-- (instancetype)init {
-    
+- (instancetype)init
+{
     self = [super init];
     if (self) {
         self.userCache = [NSCache new];

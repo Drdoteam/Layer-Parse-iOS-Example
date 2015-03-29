@@ -20,7 +20,7 @@
 
 #import "ViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 #import <ATLConstants.h>
 
 @interface PFImage : UIImage

@@ -22,7 +22,7 @@
 #import "ConversationListViewController.h"
 #import "ConversationViewController.h"
 #import <SVProgressHUD/SVProgressHUD.h>
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 #import <ATLConstants.h>
 
 @interface ConversationListViewController () <ATLConversationListViewControllerDelegate, ATLConversationListViewControllerDataSource>
@@ -70,7 +70,7 @@
 
 - (void)conversationListViewController:(ATLConversationListViewController *)conversationListViewController didSearchForText:(NSString *)searchText completion:(void (^)(NSSet *filteredParticipants))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion([NSSet setWithArray:participants]);
         } else {
@@ -87,11 +87,11 @@
     if ([conversation.metadata valueForKey:@"title"]){
         return [conversation.metadata valueForKey:@"title"];
     } else {
-        NSArray *unresolvedParticipants = [[ATLPUserDataSource sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
-        NSArray *resolvedNames = [[ATLPUserDataSource sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
+        NSArray *unresolvedParticipants = [[UserManager sharedManager] unCachedUserIDsFromParticipants:[conversation.participants allObjects]];
+        NSArray *resolvedNames = [[UserManager sharedManager] resolvedNamesFromParticipants:[conversation.participants allObjects]];
         
         if ([unresolvedParticipants count]) {
-            [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
+            [[UserManager sharedManager] queryAndCacheUsersWithIDs:unresolvedParticipants completion:^(NSArray *participants, NSError *error) {
                 if (!error) {
                     if (participants.count) {
                         [self reloadCellForConversation:conversation];

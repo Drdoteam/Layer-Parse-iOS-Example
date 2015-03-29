@@ -23,7 +23,7 @@
 #import <Bolts/Bolts.h>
 #import "ConversationViewController.h"
 #import "ParticipantTableViewController.h"
-#import "ATLPUserDataSource.h"
+#import "UserManager.h"
 
 @interface ConversationViewController () <ATLConversationViewControllerDataSource, ATLConversationViewControllerDelegate, ATLParticipantTableViewControllerDelegate>
 
@@ -77,9 +77,9 @@
 
 - (id<ATLParticipant>)conversationViewController:(ATLConversationViewController *)conversationViewController participantForIdentifier:(NSString *)participantIdentifier
 {
-    PFUser *user = [[ATLPUserDataSource sharedManager] cachedUserForUserID:participantIdentifier];
+    PFUser *user = [[UserManager sharedManager] cachedUserForUserID:participantIdentifier];
     if (!user) {
-        [[ATLPUserDataSource sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
+        [[UserManager sharedManager] queryAndCacheUsersWithIDs:@[participantIdentifier] completion:^(NSArray *participants, NSError *error) {
             if (participants && error == nil) {
                 [self.addressBarController reloadView];
                 // TODO: Need a good way to refresh all the messages for the refreshed participants...
@@ -129,7 +129,7 @@
 
 - (void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController didTapAddContactsButton:(UIButton *)addContactsButton
 {
-    [[ATLPUserDataSource sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
+    [[UserManager sharedManager] queryForAllUsersWithCompletion:^(NSArray *users, NSError *error) {
         if (!error) {
             ParticipantTableViewController *controller = [ParticipantTableViewController participantTableViewControllerWithParticipants:[NSSet setWithArray:users] sortType:ATLParticipantPickerSortTypeFirstName];
             controller.delegate = self;
@@ -144,7 +144,7 @@
 
 -(void)addressBarViewController:(ATLAddressBarViewController *)addressBarViewController searchForParticipantsMatchingText:(NSString *)searchText completion:(void (^)(NSArray *))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion(participants);
         } else {
@@ -165,7 +165,7 @@
 
 - (void)participantTableViewController:(ATLParticipantTableViewController *)participantTableViewController didSearchWithString:(NSString *)searchText completion:(void (^)(NSSet *))completion
 {
-    [[ATLPUserDataSource sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
+    [[UserManager sharedManager] queryForUserWithName:searchText completion:^(NSArray *participants, NSError *error) {
         if (!error) {
             if (completion) completion([NSSet setWithArray:participants]);
         } else {
