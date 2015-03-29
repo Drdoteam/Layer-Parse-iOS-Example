@@ -34,9 +34,8 @@ static NSString *const ParseClientKeyString = @"8blsPt88ZaXuyBnc9qnBQ7P1RJaw24RT
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    //enable Parse local data store for user persistence
+    // Enable Parse local data store for user persistence
     [Parse enableLocalDatastore];
-    // Set up Parse
     [Parse setApplicationId:ParseAppIDString
                   clientKey:ParseClientKeyString];
     
