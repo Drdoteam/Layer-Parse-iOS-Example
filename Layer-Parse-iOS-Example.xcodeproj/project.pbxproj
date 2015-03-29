@@ -25,6 +25,7 @@
 		25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */; };
 		5AD49C051AC399DD00B1B0C8 /* LayerParseSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */; };
 		C49B88E4348B2688E61F60D6 /* libPods-LayerParseSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */; };
+		DE21CBC9179B78114E756630 /* libPods-Layer-Parse-iOS-Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BB020A6C940784334B46A30 /* libPods-Layer-Parse-iOS-Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BB020A6C940784334B46A30 /* libPods-Layer-Parse-iOS-Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Layer-Parse-iOS-Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		25713D3C1AC605FC00FC5D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		25713D3E1AC605FC00FC5D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25713D3F1AC605FC00FC5D38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -62,10 +64,12 @@
 		25713D661AC6071600FC5D38 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
 		25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
-		5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerParseSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD49BFE1AC399DD00B1B0C8 /* LayerParseSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayerParseSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD49C031AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerParseSampleAppTests.m; sourceTree = "<group>"; };
+		4499B2833234A6B927451A87 /* Pods-Layer-Parse-iOS-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layer-Parse-iOS-Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Layer-Parse-iOS-Example/Pods-Layer-Parse-iOS-Example.release.xcconfig"; sourceTree = "<group>"; };
+		5AD49BE51AC399DD00B1B0C8 /* Layer-Parse-iOS-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Layer-Parse-iOS-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD49BFE1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Layer-Parse-iOS-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AD49C031AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/Info.plist; sourceTree = "<group>"; };
+		5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LayerParseSampleAppTests.m; path = Tests/LayerParseSampleAppTests.m; sourceTree = "<group>"; };
+		5D2577FDB282E79E4AA3E979 /* Pods-Layer-Parse-iOS-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Layer-Parse-iOS-Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Layer-Parse-iOS-Example/Pods-Layer-Parse-iOS-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LayerParseSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B229D8D6557B45378ED2CD58 /* Pods-LayerParseSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayerParseSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayerParseSampleApp/Pods-LayerParseSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B6B8E20DF9188E775F70E276 /* Pods-LayerParseSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayerParseSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LayerParseSampleApp/Pods-LayerParseSampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49B88E4348B2688E61F60D6 /* libPods-LayerParseSampleApp.a in Frameworks */,
+				DE21CBC9179B78114E756630 /* libPods-Layer-Parse-iOS-Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */,
+				0BB020A6C940784334B46A30 /* libPods-Layer-Parse-iOS-Example.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -165,7 +171,7 @@
 			children = (
 				25713D571AC6071600FC5D38 /* Code */,
 				25713D3A1AC605FC00FC5D38 /* Resources */,
-				5AD49C011AC399DD00B1B0C8 /* LayerParseSampleAppTests */,
+				5AD49C011AC399DD00B1B0C8 /* Tests */,
 				5AD49BE61AC399DD00B1B0C8 /* Products */,
 				69BF3150B455BF87E9EE6326 /* Pods */,
 				18E51EBCB0F1A5E9BFBD3CE4 /* Frameworks */,
@@ -175,18 +181,19 @@
 		5AD49BE61AC399DD00B1B0C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */,
-				5AD49BFE1AC399DD00B1B0C8 /* LayerParseSampleAppTests.xctest */,
+				5AD49BE51AC399DD00B1B0C8 /* Layer-Parse-iOS-Example.app */,
+				5AD49BFE1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5AD49C011AC399DD00B1B0C8 /* LayerParseSampleAppTests */ = {
+		5AD49C011AC399DD00B1B0C8 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */,
 				5AD49C021AC399DD00B1B0C8 /* Supporting Files */,
 			);
+			name = Tests;
 			path = LayerParseSampleAppTests;
 			sourceTree = "<group>";
 		};
@@ -203,6 +210,8 @@
 			children = (
 				B229D8D6557B45378ED2CD58 /* Pods-LayerParseSampleApp.debug.xcconfig */,
 				B6B8E20DF9188E775F70E276 /* Pods-LayerParseSampleApp.release.xcconfig */,
+				5D2577FDB282E79E4AA3E979 /* Pods-Layer-Parse-iOS-Example.debug.xcconfig */,
+				4499B2833234A6B927451A87 /* Pods-Layer-Parse-iOS-Example.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -210,9 +219,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5AD49BE41AC399DD00B1B0C8 /* LayerParseSampleApp */ = {
+		5AD49BE41AC399DD00B1B0C8 /* Layer-Parse-iOS-Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AD49C081AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "LayerParseSampleApp" */;
+			buildConfigurationList = 5AD49C081AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "Layer-Parse-iOS-Example" */;
 			buildPhases = (
 				870ECF4D92FFE474D362E91E /* Check Pods Manifest.lock */,
 				5AD49BE11AC399DD00B1B0C8 /* Sources */,
@@ -224,14 +233,14 @@
 			);
 			dependencies = (
 			);
-			name = LayerParseSampleApp;
+			name = "Layer-Parse-iOS-Example";
 			productName = LayerParseSampleApp;
-			productReference = 5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */;
+			productReference = 5AD49BE51AC399DD00B1B0C8 /* Layer-Parse-iOS-Example.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5AD49BFD1AC399DD00B1B0C8 /* LayerParseSampleAppTests */ = {
+		5AD49BFD1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5AD49C0B1AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "LayerParseSampleAppTests" */;
+			buildConfigurationList = 5AD49C0B1AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "Layer-Parse-iOS-ExampleTests" */;
 			buildPhases = (
 				5AD49BFA1AC399DD00B1B0C8 /* Sources */,
 				5AD49BFB1AC399DD00B1B0C8 /* Frameworks */,
@@ -242,9 +251,9 @@
 			dependencies = (
 				5AD49C001AC399DD00B1B0C8 /* PBXTargetDependency */,
 			);
-			name = LayerParseSampleAppTests;
+			name = "Layer-Parse-iOS-ExampleTests";
 			productName = LayerParseSampleAppTests;
-			productReference = 5AD49BFE1AC399DD00B1B0C8 /* LayerParseSampleAppTests.xctest */;
+			productReference = 5AD49BFE1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -265,7 +274,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5AD49BE01AC399DD00B1B0C8 /* Build configuration list for PBXProject "LayerParseSampleApp" */;
+			buildConfigurationList = 5AD49BE01AC399DD00B1B0C8 /* Build configuration list for PBXProject "Layer-Parse-iOS-Example" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -278,8 +287,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5AD49BE41AC399DD00B1B0C8 /* LayerParseSampleApp */,
-				5AD49BFD1AC399DD00B1B0C8 /* LayerParseSampleAppTests */,
+				5AD49BE41AC399DD00B1B0C8 /* Layer-Parse-iOS-Example */,
+				5AD49BFD1AC399DD00B1B0C8 /* Layer-Parse-iOS-ExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -337,7 +346,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LayerParseSampleApp/Pods-LayerParseSampleApp-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Layer-Parse-iOS-Example/Pods-Layer-Parse-iOS-Example-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -371,7 +380,7 @@
 /* Begin PBXTargetDependency section */
 		5AD49C001AC399DD00B1B0C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5AD49BE41AC399DD00B1B0C8 /* LayerParseSampleApp */;
+			target = 5AD49BE41AC399DD00B1B0C8 /* Layer-Parse-iOS-Example */;
 			targetProxy = 5AD49BFF1AC399DD00B1B0C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -474,7 +483,7 @@
 		};
 		5AD49C091AC399DD00B1B0C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B229D8D6557B45378ED2CD58 /* Pods-LayerParseSampleApp.debug.xcconfig */;
+			baseConfigurationReference = 5D2577FDB282E79E4AA3E979 /* Pods-Layer-Parse-iOS-Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -487,7 +496,7 @@
 		};
 		5AD49C0A1AC399DD00B1B0C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B6B8E20DF9188E775F70E276 /* Pods-LayerParseSampleApp.release.xcconfig */;
+			baseConfigurationReference = 4499B2833234A6B927451A87 /* Pods-Layer-Parse-iOS-Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -513,7 +522,7 @@
 				INFOPLIST_FILE = LayerParseSampleAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LayerParseSampleApp.app/LayerParseSampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Layer-Parse-iOS-Example.app/Layer-Parse-iOS-Example";
 			};
 			name = Debug;
 		};
@@ -528,14 +537,14 @@
 				INFOPLIST_FILE = LayerParseSampleAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LayerParseSampleApp.app/LayerParseSampleApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Layer-Parse-iOS-Example.app/Layer-Parse-iOS-Example";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5AD49BE01AC399DD00B1B0C8 /* Build configuration list for PBXProject "LayerParseSampleApp" */ = {
+		5AD49BE01AC399DD00B1B0C8 /* Build configuration list for PBXProject "Layer-Parse-iOS-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD49C061AC399DD00B1B0C8 /* Debug */,
@@ -544,7 +553,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AD49C081AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "LayerParseSampleApp" */ = {
+		5AD49C081AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "Layer-Parse-iOS-Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD49C091AC399DD00B1B0C8 /* Debug */,
@@ -553,7 +562,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5AD49C0B1AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "LayerParseSampleAppTests" */ = {
+		5AD49C0B1AC399DD00B1B0C8 /* Build configuration list for PBXNativeTarget "Layer-Parse-iOS-ExampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5AD49C0C1AC399DD00B1B0C8 /* Debug */,

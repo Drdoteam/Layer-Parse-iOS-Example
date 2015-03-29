@@ -1,6 +1,6 @@
 //
-//  LayerParseSampleAppTests.m
-//  LayerParseSampleAppTests
+//  Layer-Parse-iOS-ExampleTests.m
+//  Layer-Parse-iOS-ExampleTests
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
