@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5A9C519E1AC5C80800C5688F /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C519D1AC5C80800C5688F /* Users.json */; };
-		5A9C51A01AC5FF5A00C5688F /* LayerParseAppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */; };
-		5A9C51A21AC5FFEF00C5688F /* LayerParseLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */; };
-		5A9C51A41AC601C900C5688F /* LayerParseSplash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */; };
-		5AD49BEB1AC399DD00B1B0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BEA1AC399DD00B1B0C8 /* main.m */; };
-		5AD49BEE1AC399DD00B1B0C8 /* ATLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */; };
-		5AD49BF11AC399DD00B1B0C8 /* ATLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */; };
-		5AD49BF41AC399DD00B1B0C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AD49BF21AC399DD00B1B0C8 /* Main.storyboard */; };
-		5AD49BF61AC399DD00B1B0C8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AD49BF51AC399DD00B1B0C8 /* Images.xcassets */; };
-		5AD49BF91AC399DD00B1B0C8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AD49BF71AC399DD00B1B0C8 /* LaunchScreen.xib */; };
+		25713D4E1AC605FC00FC5D38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 25713D3B1AC605FC00FC5D38 /* LaunchScreen.xib */; };
+		25713D4F1AC605FC00FC5D38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25713D3D1AC605FC00FC5D38 /* Main.storyboard */; };
+		25713D501AC605FC00FC5D38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25713D3F1AC605FC00FC5D38 /* Images.xcassets */; };
+		25713D521AC605FC00FC5D38 /* LayerParseAppIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D411AC605FC00FC5D38 /* LayerParseAppIcon@2x.png */; };
+		25713D531AC605FC00FC5D38 /* LayerParseLogin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D421AC605FC00FC5D38 /* LayerParseLogin@2x.png */; };
+		25713D541AC605FC00FC5D38 /* LayerParseSplash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D431AC605FC00FC5D38 /* LayerParseSplash@2x.png */; };
+		25713D551AC605FC00FC5D38 /* parse_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 25713D441AC605FC00FC5D38 /* parse_logo.png */; };
+		25713D561AC605FC00FC5D38 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = 25713D451AC605FC00FC5D38 /* Users.json */; };
+		25713D6A1AC6071600FC5D38 /* ATLPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */; };
+		25713D6B1AC6071600FC5D38 /* PFUser+ATLParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D5C1AC6071600FC5D38 /* PFUser+ATLParticipant.m */; };
+		25713D6C1AC6071600FC5D38 /* ATLPConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */; };
+		25713D6D1AC6071600FC5D38 /* ATLPConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */; };
+		25713D6E1AC6071600FC5D38 /* ATLPParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */; };
+		25713D6F1AC6071600FC5D38 /* ATLPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D651AC6071600FC5D38 /* ATLPViewController.m */; };
+		25713D701AC6071600FC5D38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D661AC6071600FC5D38 /* main.m */; };
+		25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */; };
 		5AD49C051AC399DD00B1B0C8 /* LayerParseSampleAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */; };
-		5AD49C151AC39BE800B1B0C8 /* ATLPConversationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */; };
-		5AD49C161AC39BE800B1B0C8 /* ATLPConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */; };
-		5AD49C171AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */; };
-		5AD49C1B1AC39BFC00B1B0C8 /* ATLPUserDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */; };
-		5AD49C1F1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AD49C1E1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m */; };
-		5AD49C211AC39C1C00B1B0C8 /* parse_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */; };
 		C49B88E4348B2688E61F60D6 /* libPods-LayerParseSampleApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */; };
 /* End PBXBuildFile section */
 
@@ -38,34 +38,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5A9C519D1AC5C80800C5688F /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
-		5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseAppIcon@2x.png"; sourceTree = "<group>"; };
-		5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseLogin@2x.png"; sourceTree = "<group>"; };
-		5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseSplash@2x.png"; sourceTree = "<group>"; };
+		25713D3C1AC605FC00FC5D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		25713D3E1AC605FC00FC5D38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		25713D3F1AC605FC00FC5D38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		25713D401AC605FC00FC5D38 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25713D411AC605FC00FC5D38 /* LayerParseAppIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseAppIcon@2x.png"; sourceTree = "<group>"; };
+		25713D421AC605FC00FC5D38 /* LayerParseLogin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseLogin@2x.png"; sourceTree = "<group>"; };
+		25713D431AC605FC00FC5D38 /* LayerParseSplash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LayerParseSplash@2x.png"; sourceTree = "<group>"; };
+		25713D441AC605FC00FC5D38 /* parse_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parse_logo.png; sourceTree = "<group>"; };
+		25713D451AC605FC00FC5D38 /* Users.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		25713D581AC6071600FC5D38 /* ATLPAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPAppDelegate.h; sourceTree = "<group>"; };
+		25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPAppDelegate.m; sourceTree = "<group>"; };
+		25713D5B1AC6071600FC5D38 /* PFUser+ATLParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ATLParticipant.h"; sourceTree = "<group>"; };
+		25713D5C1AC6071600FC5D38 /* PFUser+ATLParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ATLParticipant.m"; sourceTree = "<group>"; };
+		25713D5E1AC6071600FC5D38 /* ATLPConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationListViewController.h; sourceTree = "<group>"; };
+		25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationListViewController.m; sourceTree = "<group>"; };
+		25713D601AC6071600FC5D38 /* ATLPConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationViewController.h; sourceTree = "<group>"; };
+		25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationViewController.m; sourceTree = "<group>"; };
+		25713D621AC6071600FC5D38 /* ATLPParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPParticipantTableViewController.h; sourceTree = "<group>"; };
+		25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPParticipantTableViewController.m; sourceTree = "<group>"; };
+		25713D641AC6071600FC5D38 /* ATLPViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPViewController.h; sourceTree = "<group>"; };
+		25713D651AC6071600FC5D38 /* ATLPViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPViewController.m; sourceTree = "<group>"; };
+		25713D661AC6071600FC5D38 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
+		25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
 		5AD49BE51AC399DD00B1B0C8 /* LayerParseSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LayerParseSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		5AD49BE91AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5AD49BEA1AC399DD00B1B0C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5AD49BEC1AC399DD00B1B0C8 /* ATLPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLPAppDelegate.h; sourceTree = "<group>"; };
-		5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLPAppDelegate.m; sourceTree = "<group>"; };
-		5AD49BEF1AC399DD00B1B0C8 /* ATLPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ATLPViewController.h; sourceTree = "<group>"; };
-		5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATLPViewController.m; sourceTree = "<group>"; };
-		5AD49BF31AC399DD00B1B0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5AD49BF51AC399DD00B1B0C8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		5AD49BF81AC399DD00B1B0C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5AD49BFE1AC399DD00B1B0C8 /* LayerParseSampleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LayerParseSampleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD49C031AC399DD00B1B0C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5AD49C041AC399DD00B1B0C8 /* LayerParseSampleAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LayerParseSampleAppTests.m; sourceTree = "<group>"; };
-		5AD49C0F1AC39BE800B1B0C8 /* ATLPConversationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationListViewController.h; sourceTree = "<group>"; };
-		5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationListViewController.m; sourceTree = "<group>"; };
-		5AD49C111AC39BE800B1B0C8 /* ATLPConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPConversationViewController.h; sourceTree = "<group>"; };
-		5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPConversationViewController.m; sourceTree = "<group>"; };
-		5AD49C131AC39BE800B1B0C8 /* ATLPParticipantTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPParticipantTableViewController.h; sourceTree = "<group>"; };
-		5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPParticipantTableViewController.m; sourceTree = "<group>"; };
-		5AD49C191AC39BFC00B1B0C8 /* ATLPUserDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLPUserDataSource.h; sourceTree = "<group>"; };
-		5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLPUserDataSource.m; sourceTree = "<group>"; };
-		5AD49C1D1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PFUser+ATLParticipant.h"; sourceTree = "<group>"; };
-		5AD49C1E1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PFUser+ATLParticipant.m"; sourceTree = "<group>"; };
-		5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = parse_logo.png; sourceTree = "<group>"; };
 		8C01F0B0A4201AA564136B47 /* libPods-LayerParseSampleApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LayerParseSampleApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B229D8D6557B45378ED2CD58 /* Pods-LayerParseSampleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayerParseSampleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LayerParseSampleApp/Pods-LayerParseSampleApp.debug.xcconfig"; sourceTree = "<group>"; };
 		B6B8E20DF9188E775F70E276 /* Pods-LayerParseSampleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LayerParseSampleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LayerParseSampleApp/Pods-LayerParseSampleApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,23 +98,73 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5A9C51961AC4773F00C5688F /* Atlas */ = {
+		25713D3A1AC605FC00FC5D38 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5AD49C0F1AC39BE800B1B0C8 /* ATLPConversationListViewController.h */,
-				5AD49C101AC39BE800B1B0C8 /* ATLPConversationListViewController.m */,
-				5AD49C111AC39BE800B1B0C8 /* ATLPConversationViewController.h */,
-				5AD49C121AC39BE800B1B0C8 /* ATLPConversationViewController.m */,
-				5AD49C131AC39BE800B1B0C8 /* ATLPParticipantTableViewController.h */,
-				5AD49C141AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m */,
+				25713D3B1AC605FC00FC5D38 /* LaunchScreen.xib */,
+				25713D3D1AC605FC00FC5D38 /* Main.storyboard */,
+				25713D3F1AC605FC00FC5D38 /* Images.xcassets */,
+				25713D401AC605FC00FC5D38 /* Info.plist */,
+				25713D411AC605FC00FC5D38 /* LayerParseAppIcon@2x.png */,
+				25713D421AC605FC00FC5D38 /* LayerParseLogin@2x.png */,
+				25713D431AC605FC00FC5D38 /* LayerParseSplash@2x.png */,
+				25713D441AC605FC00FC5D38 /* parse_logo.png */,
+				25713D451AC605FC00FC5D38 /* Users.json */,
 			);
-			name = Atlas;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		25713D571AC6071600FC5D38 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				25713D581AC6071600FC5D38 /* ATLPAppDelegate.h */,
+				25713D591AC6071600FC5D38 /* ATLPAppDelegate.m */,
+				25713D661AC6071600FC5D38 /* main.m */,
+				25713D5A1AC6071600FC5D38 /* Categories */,
+				25713D5D1AC6071600FC5D38 /* Controllers */,
+				25713D671AC6071600FC5D38 /* Models */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		25713D5A1AC6071600FC5D38 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				25713D5B1AC6071600FC5D38 /* PFUser+ATLParticipant.h */,
+				25713D5C1AC6071600FC5D38 /* PFUser+ATLParticipant.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		25713D5D1AC6071600FC5D38 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				25713D5E1AC6071600FC5D38 /* ATLPConversationListViewController.h */,
+				25713D5F1AC6071600FC5D38 /* ATLPConversationListViewController.m */,
+				25713D601AC6071600FC5D38 /* ATLPConversationViewController.h */,
+				25713D611AC6071600FC5D38 /* ATLPConversationViewController.m */,
+				25713D621AC6071600FC5D38 /* ATLPParticipantTableViewController.h */,
+				25713D631AC6071600FC5D38 /* ATLPParticipantTableViewController.m */,
+				25713D641AC6071600FC5D38 /* ATLPViewController.h */,
+				25713D651AC6071600FC5D38 /* ATLPViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		25713D671AC6071600FC5D38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25713D681AC6071600FC5D38 /* ATLPUserDataSource.h */,
+				25713D691AC6071600FC5D38 /* ATLPUserDataSource.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5AD49BDC1AC399DD00B1B0C8 = {
 			isa = PBXGroup;
 			children = (
-				5AD49BE71AC399DD00B1B0C8 /* LayerParseSampleApp */,
+				25713D571AC6071600FC5D38 /* Code */,
+				25713D3A1AC605FC00FC5D38 /* Resources */,
 				5AD49C011AC399DD00B1B0C8 /* LayerParseSampleAppTests */,
 				5AD49BE61AC399DD00B1B0C8 /* Products */,
 				69BF3150B455BF87E9EE6326 /* Pods */,
@@ -129,36 +179,6 @@
 				5AD49BFE1AC399DD00B1B0C8 /* LayerParseSampleAppTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5AD49BE71AC399DD00B1B0C8 /* LayerParseSampleApp */ = {
-			isa = PBXGroup;
-			children = (
-				5AD49C1C1AC39C0300B1B0C8 /* Categories */,
-				5AD49C181AC39BF000B1B0C8 /* Models */,
-				5AD49C0E1AC39BCD00B1B0C8 /* Controllers */,
-				5AD49BEC1AC399DD00B1B0C8 /* ATLPAppDelegate.h */,
-				5AD49BED1AC399DD00B1B0C8 /* ATLPAppDelegate.m */,
-				5AD49BF21AC399DD00B1B0C8 /* Main.storyboard */,
-				5AD49BF51AC399DD00B1B0C8 /* Images.xcassets */,
-				5AD49BF71AC399DD00B1B0C8 /* LaunchScreen.xib */,
-				5AD49BE81AC399DD00B1B0C8 /* Supporting Files */,
-			);
-			path = LayerParseSampleApp;
-			sourceTree = "<group>";
-		};
-		5AD49BE81AC399DD00B1B0C8 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				5A9C51A31AC601C900C5688F /* LayerParseSplash@2x.png */,
-				5A9C51A11AC5FFEF00C5688F /* LayerParseLogin@2x.png */,
-				5A9C519F1AC5FF5A00C5688F /* LayerParseAppIcon@2x.png */,
-				5A9C519D1AC5C80800C5688F /* Users.json */,
-				5AD49C201AC39C1C00B1B0C8 /* parse_logo.png */,
-				5AD49BE91AC399DD00B1B0C8 /* Info.plist */,
-				5AD49BEA1AC399DD00B1B0C8 /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		5AD49C011AC399DD00B1B0C8 /* LayerParseSampleAppTests */ = {
@@ -176,34 +196,6 @@
 				5AD49C031AC399DD00B1B0C8 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		5AD49C0E1AC39BCD00B1B0C8 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				5AD49BEF1AC399DD00B1B0C8 /* ATLPViewController.h */,
-				5AD49BF01AC399DD00B1B0C8 /* ATLPViewController.m */,
-				5A9C51961AC4773F00C5688F /* Atlas */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-		5AD49C181AC39BF000B1B0C8 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				5AD49C191AC39BFC00B1B0C8 /* ATLPUserDataSource.h */,
-				5AD49C1A1AC39BFC00B1B0C8 /* ATLPUserDataSource.m */,
-			);
-			name = Models;
-			sourceTree = "<group>";
-		};
-		5AD49C1C1AC39C0300B1B0C8 /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				5AD49C1D1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.h */,
-				5AD49C1E1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m */,
-			);
-			name = Categories;
 			sourceTree = "<group>";
 		};
 		69BF3150B455BF87E9EE6326 /* Pods */ = {
@@ -297,14 +289,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD49C211AC39C1C00B1B0C8 /* parse_logo.png in Resources */,
-				5A9C51A21AC5FFEF00C5688F /* LayerParseLogin@2x.png in Resources */,
-				5AD49BF41AC399DD00B1B0C8 /* Main.storyboard in Resources */,
-				5AD49BF91AC399DD00B1B0C8 /* LaunchScreen.xib in Resources */,
-				5A9C51A01AC5FF5A00C5688F /* LayerParseAppIcon@2x.png in Resources */,
-				5A9C519E1AC5C80800C5688F /* Users.json in Resources */,
-				5AD49BF61AC399DD00B1B0C8 /* Images.xcassets in Resources */,
-				5A9C51A41AC601C900C5688F /* LayerParseSplash@2x.png in Resources */,
+				25713D541AC605FC00FC5D38 /* LayerParseSplash@2x.png in Resources */,
+				25713D4F1AC605FC00FC5D38 /* Main.storyboard in Resources */,
+				25713D501AC605FC00FC5D38 /* Images.xcassets in Resources */,
+				25713D531AC605FC00FC5D38 /* LayerParseLogin@2x.png in Resources */,
+				25713D521AC605FC00FC5D38 /* LayerParseAppIcon@2x.png in Resources */,
+				25713D551AC605FC00FC5D38 /* parse_logo.png in Resources */,
+				25713D561AC605FC00FC5D38 /* Users.json in Resources */,
+				25713D4E1AC605FC00FC5D38 /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,14 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5AD49BF11AC399DD00B1B0C8 /* ATLPViewController.m in Sources */,
-				5AD49C161AC39BE800B1B0C8 /* ATLPConversationViewController.m in Sources */,
-				5AD49C1F1AC39C0C00B1B0C8 /* PFUser+ATLParticipant.m in Sources */,
-				5AD49C171AC39BE800B1B0C8 /* ATLPParticipantTableViewController.m in Sources */,
-				5AD49C1B1AC39BFC00B1B0C8 /* ATLPUserDataSource.m in Sources */,
-				5AD49BEE1AC399DD00B1B0C8 /* ATLPAppDelegate.m in Sources */,
-				5AD49C151AC39BE800B1B0C8 /* ATLPConversationListViewController.m in Sources */,
-				5AD49BEB1AC399DD00B1B0C8 /* main.m in Sources */,
+				25713D6A1AC6071600FC5D38 /* ATLPAppDelegate.m in Sources */,
+				25713D6C1AC6071600FC5D38 /* ATLPConversationListViewController.m in Sources */,
+				25713D6B1AC6071600FC5D38 /* PFUser+ATLParticipant.m in Sources */,
+				25713D6D1AC6071600FC5D38 /* ATLPConversationViewController.m in Sources */,
+				25713D6E1AC6071600FC5D38 /* ATLPParticipantTableViewController.m in Sources */,
+				25713D711AC6071600FC5D38 /* ATLPUserDataSource.m in Sources */,
+				25713D701AC6071600FC5D38 /* main.m in Sources */,
+				25713D6F1AC6071600FC5D38 /* ATLPViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,20 +377,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5AD49BF21AC399DD00B1B0C8 /* Main.storyboard */ = {
+		25713D3B1AC605FC00FC5D38 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				5AD49BF31AC399DD00B1B0C8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5AD49BF71AC399DD00B1B0C8 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AD49BF81AC399DD00B1B0C8 /* Base */,
+				25713D3C1AC605FC00FC5D38 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		25713D3D1AC605FC00FC5D38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				25713D3E1AC605FC00FC5D38 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -485,7 +477,9 @@
 			baseConfigurationReference = B229D8D6557B45378ED2CD58 /* Pods-LayerParseSampleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LayerParseSampleApp/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -496,7 +490,9 @@
 			baseConfigurationReference = B6B8E20DF9188E775F70E276 /* Pods-LayerParseSampleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = LayerParseSampleApp/Info.plist;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "$(SRCROOT)/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

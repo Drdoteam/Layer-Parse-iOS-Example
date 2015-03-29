@@ -20,10 +20,6 @@
 
 #import "ATLPParticipantTableViewController.h"
 
-@interface ATLPParticipantTableViewController ()
-
-@end
-
 @implementation ATLPParticipantTableViewController
 
 #pragma mark - Lifecycle Methods
