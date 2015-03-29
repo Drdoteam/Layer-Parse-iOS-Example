@@ -1,6 +1,6 @@
 //
 //  ConversationViewController.h
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 2/28/15.
 //  Copyright (c) 2015 Layer. All rights reserved.

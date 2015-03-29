@@ -1,6 +1,6 @@
 //
 //  ConversationListViewController.h
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Copyright (c) 2015 Layer. All rights reserved.
 //

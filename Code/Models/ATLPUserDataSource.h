@@ -1,6 +1,6 @@
 //
 //  ATLPDataSource.h
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Created by Kabir Mahal on 3/25/15.
 //  Copyright (c) 2015 Layer. All rights reserved.

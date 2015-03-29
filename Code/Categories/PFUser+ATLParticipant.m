@@ -1,6 +1,6 @@
 //
 //  PFUser+Participant.h
-//  LayerParseTest
+//  Layer-Parse-iOS-Example
 //
 //  Created by Abir Majumdar on 3/1/15.
 //  Copyright (c) 2015 Layer. All rights reserved.
